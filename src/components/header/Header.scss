@@ -1,0 +1,40 @@
+@use "../../styles/variables" as var;
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #ffffff;
+  color: #000000;
+  // background: var.$primary-color;
+  // color: var.$white;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+  height: 3.2rem;
+
+  .menu-icon {
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    display: none;
+  }
+
+  .brand-logo-img {
+    width: 2rem;
+    cursor: pointer;
+  }
+
+  .auth-logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    flex: 1;
+  }
+}
+
+@media (max-width: 950px) {
+  .menu-icon {
+    display: block !important;
+  }
+}

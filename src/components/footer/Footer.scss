@@ -1,0 +1,26 @@
+@use "../../styles/variables" as var;
+
+.footer {
+  padding: 1rem;
+  background: var.$primary-color;
+  color: var.$text-color;
+  line-height: 1.8rem;
+
+  .footer-message {
+    font-size: 1rem;
+    font-weight: 600;
+
+    .heart {
+      color: var.$red;
+    }
+
+    .tools {
+      color: var.$color-brown;
+    }
+  }
+
+  .footer-text {
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+}
