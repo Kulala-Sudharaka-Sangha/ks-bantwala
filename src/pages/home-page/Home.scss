@@ -1,0 +1,21 @@
+.home {
+  background-image: url("../../assets/kulala-samudaya-bhavana.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(32, 32, 32, 0.65);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
