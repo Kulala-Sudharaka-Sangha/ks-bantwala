@@ -11,19 +11,9 @@
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
   height: 3.2rem;
 
-  .menu-icon {
-    padding-right: 1rem;
-    font-size: 1.2rem;
-    display: none;
-  }
-
   .brand-logo-img {
     width: 2rem;
     cursor: pointer;
-  }
-
-  .auth-logo-icon {
-    font-size: 1.5rem;
   }
 
   .brand-name {
@@ -34,7 +24,7 @@
 }
 
 @media (max-width: 950px) {
-  .menu-icon {
-    display: block !important;
+  .header {
+    display: none !important;
   }
 }

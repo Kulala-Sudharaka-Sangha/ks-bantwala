@@ -1,0 +1,46 @@
+import "./DrawerMenu.scss";
+import { MenuItem, Menu, MenuCategory } from "../../utils/master-menu";
+import useNavigation from "../../hooks/useNavigation";
+import { useDispatch } from "react-redux";
+import { toggleDrawerMenu } from "../../store/slices/ui-controls";
+
+const DrawerMenu = () => {
+  const dispatch = useDispatch();
+  const navigation = useNavigation();
+
+  const handleItemClick = (item: MenuItem) => {
+    dispatch(toggleDrawerMenu(false));
+    navigation.handleNavigation(item.path);
+  };
+
+  return (
+    <div className="drawer-menu">
+      {Menu.map((category: MenuCategory) => (
+        <div
+          key={category.id}
+          className={`drawer-menu-category${
+            category.id === 1 ? " active" : ""
+          }`}
+        >
+          {!category.hasSubCategory && (
+            <div>
+              <div className="drawer-menu-category-title">
+                {category.category}
+              </div>
+              <ul>
+                {category.items.length > 1 &&
+                  category.items.map((item: MenuItem) => (
+                    <li key={item.id} onClick={() => handleItemClick(item)}>
+                      <div className="menu-title">{item.name}</div>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default DrawerMenu;
