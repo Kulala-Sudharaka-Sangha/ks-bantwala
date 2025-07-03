@@ -1,13 +1,13 @@
 import "./Header.scss";
-// import BrandLogo from "../../assets/react.svg";
+import BrandLogo from "../../assets/kulal-logo.png";
 
 const Header = () => {
   return (
     <div className="header">
-      {/* <div className="brand-logo">
-        <img src={BrandLogo} alt="brand-logo" className="brand-logo-img" />
-      </div> */}
-      <div className="brand-name">ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)</div>
+      <div className="brand-name">
+        <img src={BrandLogo} alt="brand-logo" className="brand-logo" />
+        ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)
+      </div>
     </div>
   );
 };
