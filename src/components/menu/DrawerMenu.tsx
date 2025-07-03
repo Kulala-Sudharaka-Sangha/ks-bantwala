@@ -19,7 +19,7 @@ const DrawerMenu = () => {
         <div
           key={category.id}
           className={`drawer-menu-category${
-            category.id === 1 ? " active" : ""
+            category.id === 0 ? " active" : ""
           }`}
         >
           {!category.hasSubCategory && (

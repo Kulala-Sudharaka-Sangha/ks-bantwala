@@ -72,6 +72,14 @@
       overflow: hidden;
       white-space: nowrap;
       animation: typing 1s steps(30, end);
+
+      .brand-logo {
+        width: 4rem;
+        height: 4rem;
+        object-fit: cover;
+        vertical-align: middle;
+        display: none;
+      }
     }
 
     @keyframes typing {
@@ -99,6 +107,16 @@
 
     .page-information-container {
       padding: unset;
+
+      .info-title {
+        white-space: normal;
+        animation: unset;
+        font-size: 2rem;
+
+        .brand-logo {
+          display: inline-block;
+        }
+      }
     }
   }
 }

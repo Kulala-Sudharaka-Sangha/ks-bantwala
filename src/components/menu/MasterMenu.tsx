@@ -44,11 +44,11 @@ const MasterMenu = () => {
         </div>
         <div className="brand-name">ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)</div>
         <div className="language-selector">
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faLanguage}
             className="menu-icon"
             onClick={() => {}}
-          />
+          /> */}
         </div>
         {isDrawerMenuOpen && <DrawerMenu />}
       </div>

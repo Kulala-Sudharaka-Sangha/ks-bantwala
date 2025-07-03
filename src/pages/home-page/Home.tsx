@@ -1,11 +1,15 @@
 import "./Home.scss";
 import buildingImage from "../../assets/kulala-samudaya-bhavana.jpg";
+import BrandLogo from "../../assets/kulal-logo.png";
 
 const Home = () => {
   return (
     <div className="home">
       <div className="page-information-container">
-        <h1 className="info-title">ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)</h1>
+        <h1 className="info-title">
+          ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)
+          <img src={BrandLogo} alt="brand-logo" className="brand-logo" />
+        </h1>
         <p className="info-description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
