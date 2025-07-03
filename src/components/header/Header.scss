@@ -6,10 +6,9 @@
   padding: 1rem;
   background: #ffffff;
   color: #000000;
-  // background: var.$primary-color;
-  // color: var.$white;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
   height: 3.2rem;
+  z-index: 2;
 
   .brand-logo-img {
     width: 2rem;
