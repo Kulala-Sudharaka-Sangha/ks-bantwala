@@ -24,17 +24,24 @@ const DrawerMenu = () => {
         >
           {!category.hasSubCategory && (
             <div>
-              <div className="drawer-menu-category-title">
-                {category.category}
-              </div>
-              <ul>
-                {category.items.length > 1 &&
-                  category.items.map((item: MenuItem) => (
-                    <li key={item.id} onClick={() => handleItemClick(item)}>
-                      <div className="menu-title">{item.name}</div>
-                    </li>
-                  ))}
-              </ul>
+              {category.items.length > 1 ? (
+                <details>
+                  <summary className="drawer-menu-category-title">
+                    {category.category}
+                  </summary>
+                  <ul>
+                    {category.items.map((item: MenuItem) => (
+                      <li key={item.id} onClick={() => handleItemClick(item)}>
+                        <div className="menu-title">{item.name}</div>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ) : (
+                <div className="drawer-menu-category-title">
+                  {category.category}
+                </div>
+              )}
             </div>
           )}
         </div>
