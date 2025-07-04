@@ -1,5 +1,20 @@
 @use "../../styles/variables" as var;
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
 .footer {
   padding: 1rem;
   background: var.$primary-color;
@@ -22,5 +37,94 @@
   .footer-text {
     font-weight: 600;
     font-size: 0.8rem;
+  }
+
+  .social-follow {
+    margin-top: 1rem;
+    text-align: center;
+
+    .follow-text {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var.$text-color;
+    }
+
+    .social-icons {
+      margin-top: 0.5rem;
+
+      svg {
+        margin: 0 0.5rem;
+        font-size: 1.5rem;
+        color: var.$icon-color;
+        transition: 0.3s ease;
+
+        &:hover {
+          color: var.$highlight-color;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .footer-contact-toggle {
+    text-align: center;
+    margin-top: 1rem;
+
+    button {
+      background: var.$secondary-color;
+      color: var.$text-color;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: var.$border-radius;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover {
+        background: var.$highlight-color;
+        color: var.$white;
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  .footer-contact {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: var.$background-light;
+    border-radius: var.$border-radius;
+
+    .contact-heading {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: var.$text-color;
+      text-align: center;
+    }
+
+    .contact-details {
+      font-size: 0.8rem;
+      line-height: 1.6rem;
+      color: var.$text-color;
+      text-align: center;
+
+      p {
+        margin: 0.25rem 0;
+      }
+
+      a {
+        color: var.$icon-color;
+        text-decoration: underline;
+
+        &:hover {
+          color: var.$highlight-color;
+        }
+      }
+
+      .note {
+        font-size: 0.7rem;
+        color: var.$red;
+        margin-top: 0.5rem;
+      }
+    }
   }
 }
