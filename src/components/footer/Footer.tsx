@@ -1,19 +1,84 @@
 import "./Footer.scss";
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faTools } from "@fortawesome/free-solid-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faYoutube,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
+  const [visible, setVisible] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+
+    if (footerRef.current) observer.observe(footerRef.current);
+
+    return () => {
+      if (footerRef.current) observer.unobserve(footerRef.current);
+    };
+  }, []);
+
   return (
-    <div className="footer">
+    <div className={`footer ${visible ? "animate" : ""}`} ref={footerRef}>
       <div className="footer-message">
         Made with <FontAwesomeIcon icon={faHeart} className="heart" /> and{" "}
         <FontAwesomeIcon icon={faTools} className="tools" />
-        &nbsp;&nbsp;by Hare Krishna DevWorks
+        &nbsp;&nbsp;by Kulala sevadala DevWorks
       </div>
+
       <div className="footer-text">
-        All Rights Reserved <FontAwesomeIcon icon={faCopyright} /> Hare Krishna
-        DevWorks
+        All Rights Reserved <FontAwesomeIcon icon={faCopyright} /> Kulala sevadala DevWorks
+      </div>
+
+      <div className="social-follow">
+        <span className="follow-text">Follow Us On</span>
+        <div className="social-icons">
+          <a href="https://www.facebook.com/kulala_sevadala" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFacebook} title="Facebook" />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTwitter} title="Twitter" />
+          </a>
+          <a href="https://www.instagram.com/kulala_sevadala?igsh=djY2aGd6eDk3bzlj" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} title="Instagram" />
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faYoutube} title="YouTube" />
+          </a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faWhatsapp} title="WhatsApp" />
+          </a>
+        </div>
+      </div>
+
+      <div className="footer-contact-toggle">
+        <button onClick={() => setShowContact(!showContact)}>
+          {showContact ? "Hide Contact Info" : "Show Contact Info"}
+        </button>
+
+        {showContact && (
+          <div className="footer-contact">
+            <span className="contact-heading">Contact Us</span>
+            <div className="contact-details">
+              <p><strong>Toll Free Number:</strong> 18001033611</p>
+              <p><strong>Avvatar Care Email:</strong> <a href="mailto:CUSTOMERCARE@PARAG.COM">CUSTOMERCARE@PARAG.COM</a></p>
+              <p><strong>Email & Call Timings:</strong> Monday to Saturday (11:00 AM – 6:00 PM)</p>
+              <p><strong>WhatsApp Messaging:</strong> Monday to Friday (9:30 AM – 6:30 PM)</p>
+              <p className="note">*Please note – No calls will be entertained on WhatsApp.</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
