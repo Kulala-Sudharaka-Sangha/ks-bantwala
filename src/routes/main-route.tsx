@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import { RoutesList } from "../utils/master-menu";
 import Home from "../pages/home-page/Home";
+import MembershipRegistration from "../pages/membership-registration/MembershipRegistration";
 
 const appRouter = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: RoutesList.NOT_FOUND,
-        element: <div>Menu 1</div>,
+        element: <MembershipRegistration />,
       },
     ],
   },
