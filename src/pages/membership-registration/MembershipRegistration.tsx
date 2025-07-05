@@ -1,6 +1,7 @@
 import "./MembershipRegistration.scss";
 import InputBox, { InputTypes } from "../../components/input-box/InputBox";
 import { useEffect, useState } from "react";
+import CheckBox from "../../components/check-box/ChckBox";
 
 const MembershipRegistration = () => {
   const [firstName, setFirstName] = useState("");
@@ -15,9 +16,11 @@ const MembershipRegistration = () => {
   const [bloodGroup, setBloodGroup] = useState("");
   const [profession, setProfession] = useState("");
   const [hobbyInterest, setHobbyInterest] = useState("");
-  const [_memberPhoto, setMemberPhoto] = useState<File | null>(null);
   const [previewImgSrc, setPreviewImgSrc] = useState("");
+  const [isAcceptDeclaration, setIsAcceptDeclaration] = useState(false);
   const [_fileName, setFileName] = useState("");
+  const [_memberPhoto, setMemberPhoto] = useState<File | null>(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (dateOfBirth) {
@@ -58,6 +61,49 @@ const MembershipRegistration = () => {
 
   return (
     <div className="membership-registration">
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <div>
+              <div className="title">Membership Declaration</div>
+              <div className="declaration-info">
+                <ul>
+                  <li>I am above 18 years of age.</li>
+                  <li>I belong to the Moolya / Kulala / Handa community.</li>
+                  <li>
+                    I am currently residing in Bangalore and my native place is
+                    in the districts of Dakshina Kannada / Udupi / Kodagu /
+                    Kasaragodu or nearby districts.
+                  </li>
+                  <li>
+                    I understand that the membership request is subject to
+                    approval by the Executive Committee.
+                  </li>
+                  <li>
+                    I agree to pay the membership fee of INR 500/-, which is a
+                    one-time lifetime membership fee.
+                  </li>
+                  <li>
+                    As a member, I will be eligible to vote and participate in
+                    the selection of the committee members once every year.
+                  </li>
+                  <li>
+                    The information provided by me is true and correct to the
+                    best of my knowledge.
+                  </li>
+                  <li>
+                    I agree to abide by the rules and regulations of the Kulala
+                    Sudharaka Sangha (R.) Bantwala.
+                  </li>
+                </ul>
+              </div>
+              <button className="btn" onClick={() => setShowModal(false)}>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="form-container">
         <form className="form" onSubmit={(e) => e.preventDefault()}>
           <div className="form-title">
@@ -210,6 +256,26 @@ const MembershipRegistration = () => {
                 alt="Image Preview"
               />
             )}
+          </div>
+          <div className="input-row">
+            <CheckBox
+              id="accept-declaration"
+              name="accept-declaration"
+              label=""
+              value={isAcceptDeclaration}
+              toggleCheckBox={setIsAcceptDeclaration}
+            />
+            <span className="checkbox-label">
+              I accept the
+              <strong> Kulala Sudharaka Sangha (R) Bantwala </strong>
+              Membership{" "}
+              <span
+                className="declaration-link"
+                onClick={() => setShowModal(true)}
+              >
+                Declaration
+              </span>
+            </span>
           </div>
           <button type="submit" className="btn">
             CREATE
