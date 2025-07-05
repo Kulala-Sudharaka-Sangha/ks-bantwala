@@ -13,7 +13,6 @@ import {
 
 const Footer = () => {
   const [visible, setVisible] = useState(false);
-  const [showContact, setShowContact] = useState(false);
   const footerRef = useRef(null);
 
   useEffect(() => {
@@ -60,25 +59,6 @@ const Footer = () => {
             <FontAwesomeIcon icon={faWhatsapp} title="WhatsApp" />
           </a>
         </div>
-      </div>
-
-      <div className="footer-contact-toggle">
-        <button onClick={() => setShowContact(!showContact)}>
-          {showContact ? "Hide Contact Info" : "Show Contact Info"}
-        </button>
-
-        {showContact && (
-          <div className="footer-contact">
-            <span className="contact-heading">Contact Us</span>
-            <div className="contact-details">
-              <p><strong>Toll Free Number:</strong> 18001033611</p>
-              <p><strong>Avvatar Care Email:</strong> <a href="mailto:CUSTOMERCARE@PARAG.COM">CUSTOMERCARE@PARAG.COM</a></p>
-              <p><strong>Email & Call Timings:</strong> Monday to Saturday (11:00 AM – 6:00 PM)</p>
-              <p><strong>WhatsApp Messaging:</strong> Monday to Friday (9:30 AM – 6:30 PM)</p>
-              <p className="note">*Please note – No calls will be entertained on WhatsApp.</p>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

@@ -9,7 +9,7 @@
   border: 1px solid var.$primary-color;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: var.$border-radius;
   cursor: pointer;
   text-align: center;
   transition: background 0.3s ease, color 0.3s ease;
@@ -19,7 +19,6 @@
     color: var.$white;
   }
 
-  // Responsive sizing
   @media (max-width: 600px) {
     font-size: 0.9rem;
     padding: 0.6rem;
@@ -53,6 +52,7 @@
 .btn--disabled {
   background: var.$light-gray;
   color: var.$gray;
+  border: none;
   cursor: not-allowed;
   pointer-events: none;
 }
