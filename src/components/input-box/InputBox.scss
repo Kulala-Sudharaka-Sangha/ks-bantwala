@@ -41,7 +41,7 @@
   .input-field:not(:placeholder-shown) + .input-label {
     top: 0;
     font-size: 12px;
-    color: var.$primary-color;
+    color: var.$black;
     background-color: var.$white;
     padding: 0 4px;
     margin-left: -4px;
@@ -75,9 +75,9 @@
     }
 
     &:hover {
-      background-color: var.$secondary-color;
+      background-color: var.$primary-color;
       border: 1px solid var.$primary-color;
-      color: var.$primary-color;
+      color: var.$gray;
       box-shadow: 0 0 4px var.$secondary-color;
     }
 
@@ -122,7 +122,7 @@
 .dropdown-select:not([value=""]) + .dropdown-label {
   top: -8px; /* Move to the border */
   font-size: 12px;
-  color: var.$primary-color;
+  color: var.$black;
   background-color: var.$white;
   padding: 0 4px;
   margin-left: -4px;
