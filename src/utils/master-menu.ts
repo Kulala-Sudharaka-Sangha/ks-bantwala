@@ -1,6 +1,7 @@
 enum RoutesList {
   HOME = "/",
   NOT_FOUND = "*",
+  MEMBERSHIP_REGISTRATION = "/member-registration",
 }
 
 interface SubMenuItem {
@@ -65,7 +66,11 @@ const Menu = [
     category: MenuCategories.MemberRegistration,
     hasSubCategory: false,
     items: [
-      { id: "member-registration", name: MenuCategories.MemberRegistration },
+      {
+        id: "member-registration",
+        name: MenuCategories.MemberRegistration,
+        path: RoutesList.MEMBERSHIP_REGISTRATION,
+      },
     ],
   },
   // {

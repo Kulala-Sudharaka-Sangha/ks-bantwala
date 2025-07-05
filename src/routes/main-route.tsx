@@ -14,8 +14,12 @@ const appRouter = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: RoutesList.NOT_FOUND,
+        path: RoutesList.MEMBERSHIP_REGISTRATION,
         element: <MembershipRegistration />,
+      },
+      {
+        path: RoutesList.NOT_FOUND,
+        element: <div>Not Found</div>,
       },
     ],
   },
