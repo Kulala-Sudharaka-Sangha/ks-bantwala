@@ -18,4 +18,11 @@
     justify-content: center;
     width: 100%;
   }
+
+  .menu-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
 }
