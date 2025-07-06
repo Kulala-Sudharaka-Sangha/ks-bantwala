@@ -38,7 +38,10 @@ const DrawerMenu = () => {
                   </ul>
                 </details>
               ) : (
-                <div className="drawer-menu-category-title">
+                <div
+                  className="drawer-menu-category-title"
+                  onClick={() => handleItemClick(category.items[0])}
+                >
                   {category.category}
                 </div>
               )}
