@@ -17,13 +17,16 @@ const RazorpayPayment: React.FC = () => {
   const handlePayment = async () => {
     try {
       // Call backend to create Razorpay order
-      const response = await fetch("https://ks-bantwala.onrender.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ amount: 500 }), // ₹500
-      });
+      const response = await fetch(
+        "https://ks-bantwala.onrender.com/create-order",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ amount: 500 }), // ₹500
+        }
+      );
 
       const data: RazorpayOrder = await response.json();
 
