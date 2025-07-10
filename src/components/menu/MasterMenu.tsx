@@ -12,9 +12,11 @@ import BrandLogo from "../../assets/kulal-logo.png";
 
 const MasterMenu = () => {
   const dispatch = useDispatch();
-
   const isDrawerMenuOpen =
     useSelector<RootState>((state) => state.uiControls.isDrawerMenuOpen) ??
+    false;
+  const activeRouterPage =
+    useSelector<RootState>((state) => state.uiControls.activeRouterPage) ??
     false;
   const navigation = useNavigation();
 

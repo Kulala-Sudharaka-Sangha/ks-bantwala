@@ -1,12 +1,16 @@
 import "./DrawerMenu.scss";
 import { MenuItem, Menu, MenuCategory } from "../../utils/master-menu";
 import useNavigation from "../../hooks/useNavigation";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleDrawerMenu } from "../../store/slices/ui-controls";
+import type { RootState } from "../../store/app-store";
 
 const DrawerMenu = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
+  const activeRouterPage =
+    useSelector<RootState>((state) => state.uiControls.activeRouterPage) ??
+    false;
 
   const handleItemClick = (item: MenuItem) => {
     dispatch(toggleDrawerMenu(false));
@@ -19,7 +23,7 @@ const DrawerMenu = () => {
         <div
           key={category.id}
           className={`drawer-menu-category${
-            category.id === 0 ? " active" : ""
+            activeRouterPage === category.items[0].path ? " active" : ""
           }`}
         >
           {!category.hasSubCategory && (
