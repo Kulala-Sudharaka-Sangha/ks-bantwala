@@ -44,6 +44,13 @@
     font-weight: 600;
     font-size: 1.2rem;
     height: 3.8rem;
+
+    .brand-logo {
+      width: 3.5rem;
+      height: 3.5rem;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
   }
 
   .menu-category {
@@ -151,8 +158,9 @@
       padding: 1rem;
 
       .brand-name {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 800;
+        white-space: nowrap;
       }
     }
   }

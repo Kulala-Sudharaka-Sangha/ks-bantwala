@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage, faList } from "@fortawesome/free-solid-svg-icons";
 import { toggleDrawerMenu } from "../../store/slices/ui-controls";
+import BrandLogo from "../../assets/kulal-logo.png";
 
 const MasterMenu = () => {
   const dispatch = useDispatch();
@@ -53,6 +54,7 @@ const MasterMenu = () => {
         {isDrawerMenuOpen && <DrawerMenu />}
       </div>
       <div className="horizontal-menu desktop">
+        <img src={BrandLogo} alt="brand-logo" className="brand-logo" />
         {Menu.map((category: MenuCategory) => (
           <div key={category.id} className="menu-category">
             {!category.hasSubCategory && (

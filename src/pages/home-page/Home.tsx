@@ -1,37 +1,34 @@
 import "./Home.scss";
-import buildingImage from "../../assets/kulala-samudaya-bhavana.jpg";
 import BrandLogo from "../../assets/kulal-logo.png";
+import useNavigation from "../../hooks/useNavigation";
+import { RoutesList } from "../../utils/master-menu";
 
 const Home = () => {
+  const navigation = useNavigation();
+
   return (
     <div className="home">
-      <div className="page-information-container">
-        <h1 className="info-title">
-          ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)
-          <img src={BrandLogo} alt="brand-logo" className="brand-logo" />
-        </h1>
+      <div className="page-information">
+        <img src={BrandLogo} alt="brand-logo" className="brand-logo" />
+        <div className="welcome-message">
+          ನಮಸ್ತೇ ಕುಲಾಲ ಬಂಧುಗಳೆ! <span className="highlight">ಸ್ವಾಗತ</span>
+        </div>
+        <div className="info-title">ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)</div>
         <p className="info-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Sed ut
-          perspiciatis unde omnis iste natus error sit voluptatem accusantium
-          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-          inventore veritatis et quasi architecto beatae vitae dicta sunt
-          explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-          odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-          voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-          quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-          eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-          voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
-          ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+          itaque fugiat dolore quasi minus consequatur illum dolorum delectus
+          iste corrupti impedit aspernatur, porro blanditiis dolores, ab
+          molestias omnis accusantium ratione?
         </p>
-      </div>
-      <div className="building-image-container">
-        <img className="building-image" src={buildingImage} alt="building" />
+        <button
+          type="submit"
+          className="btn"
+          onClick={() => {
+            navigation.handleNavigation(RoutesList.MEMBERSHIP_REGISTRATION);
+          }}
+        >
+          ಬನ್ನಿ, ಜೊತೆಯಾಗಿ
+        </button>
       </div>
     </div>
   );
