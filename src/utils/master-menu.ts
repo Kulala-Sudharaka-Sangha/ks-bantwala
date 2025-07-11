@@ -3,6 +3,8 @@ enum RoutesList {
   NOT_FOUND = "*",
   MEMBERSHIP_REGISTRATION = "/member-registration",
   MEMBERS_LIST = "/members-list",
+  GALLERY = "/gallery",
+  CONTACT_US = "/contact-us",
 }
 
 interface SubMenuItem {
@@ -85,13 +87,21 @@ const Menu = [
     id: 4,
     category: MenuCategories.Gallery,
     hasSubCategory: false,
-    items: [{ id: "gallery", name: MenuCategories.Gallery }],
+    items: [
+      { id: "gallery", name: MenuCategories.Gallery, path: RoutesList.GALLERY },
+    ],
   },
   {
     id: 5,
     category: MenuCategories.ContactUs,
     hasSubCategory: false,
-    items: [{ id: "contact-us", name: MenuCategories.ContactUs }],
+    items: [
+      {
+        id: "contact-us",
+        name: MenuCategories.ContactUs,
+        path: RoutesList.CONTACT_US,
+      },
+    ],
   },
 ];
 
