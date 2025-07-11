@@ -3,9 +3,10 @@ import App from "../App";
 import { RoutesList } from "../utils/master-menu";
 import Home from "../pages/home-page/Home";
 import MembershipRegistration from "../pages/membership-registration/MembershipRegistration";
-import MembersList from "../pages/members-list/MembersList";
+import CommitteeMembers from "../pages/committee-members/CommitteeMembers";
 import { Gallery } from "../pages/gallery/Gallery";
 import ContactPage from "../pages/contact-page/ContactPage";
+import MembersList from "../pages/members-list/MembersList";
 
 const appRouter = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const appRouter = createBrowserRouter([
       {
         path: RoutesList.MEMBERSHIP_REGISTRATION,
         element: <MembershipRegistration />,
+      },
+      {
+        path: RoutesList.COMMITTEE_MEMBERS,
+        element: <CommitteeMembers />,
       },
       {
         path: RoutesList.MEMBERS_LIST,

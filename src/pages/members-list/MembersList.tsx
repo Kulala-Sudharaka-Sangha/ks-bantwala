@@ -1,262 +1,271 @@
 import "./MembersList.scss";
+import InputBox, { InputTypes } from "../../components/input-box/InputBox";
+
+const membersInfo = [
+  {
+    id: 1,
+    voterID: "1234567890",
+    name: "Sansa Kulal",
+    fatherOrHusbendName: "Eddard Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Near Bantwala Bus Stand",
+    phNumber: "9876543210",
+    bloodGroup: "A+",
+    image: "https://loremflickr.com/160/160/person?lock=0",
+  },
+  {
+    id: 2,
+    voterID: "2345678901",
+    name: "Arya Kulal",
+    fatherOrHusbendName: "Eddard Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Near Market",
+    phNumber: "8765432109",
+    bloodGroup: "B+",
+    image: "https://loremflickr.com/160/160/person?lock=1",
+  },
+  {
+    id: 3,
+    voterID: "3456789012",
+    name: "Bran Kulal",
+    fatherOrHusbendName: "Eddard Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Main Road",
+    phNumber: "7654321098",
+    bloodGroup: "O+",
+    image: "https://loremflickr.com/160/160/person?lock=2",
+  },
+  {
+    id: 4,
+    voterID: "4567890123",
+    name: "Robb Kulal",
+    fatherOrHusbendName: "Eddard Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Near Temple",
+    phNumber: "6543210987",
+    bloodGroup: "AB+",
+    image: "https://loremflickr.com/160/160/person?lock=3",
+  },
+  {
+    id: 5,
+    voterID: "5678901234",
+    name: "Jon Kulal",
+    fatherOrHusbendName: "Rhaegar Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Hilltop",
+    phNumber: "5432109876",
+    bloodGroup: "A-",
+    image: "https://loremflickr.com/160/160/person?lock=4",
+  },
+  {
+    id: 6,
+    voterID: "6789012345",
+    name: "Rickon Kulal",
+    fatherOrHusbendName: "Eddard Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Riverside",
+    phNumber: "4321098765",
+    bloodGroup: "B-",
+    image: "https://loremflickr.com/160/160/person?lock=5",
+  },
+  {
+    id: 7,
+    voterID: "7890123456",
+    name: "Catelyn Kulal",
+    fatherOrHusbendName: "Hoster Kulal",
+    address: "Bantwala, Karnataka, India, 574211, South Street",
+    phNumber: "3210987654",
+    bloodGroup: "O-",
+    image: "https://loremflickr.com/160/160/person?lock=6",
+  },
+  {
+    id: 8,
+    voterID: "8901234567",
+    name: "Theon Kulal",
+    fatherOrHusbendName: "Balon Kulal",
+    address: "Bantwala, Karnataka, India, 574211, North Street",
+    phNumber: "2109876543",
+    bloodGroup: "AB-",
+    image: "https://loremflickr.com/160/160/person?lock=7",
+  },
+  {
+    id: 9,
+    voterID: "9012345678",
+    name: "Samwell Kulal",
+    fatherOrHusbendName: "Randyll Kulal",
+    address: "Bantwala, Karnataka, India, 574211, East End",
+    phNumber: "1098765432",
+    bloodGroup: "A+",
+    image: "https://loremflickr.com/160/160/person?lock=8",
+  },
+  {
+    id: 10,
+    voterID: "0123456789",
+    name: "Gilly Kulal",
+    fatherOrHusbendName: "Craster Kulal",
+    address: "Bantwala, Karnataka, India, 574211, West End",
+    phNumber: "1987654321",
+    bloodGroup: "B+",
+    image: "https://loremflickr.com/160/160/person?lock=9",
+  },
+  {
+    id: 11,
+    voterID: "1123456789",
+    name: "Brienne Kulal",
+    fatherOrHusbendName: "Selwyn Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Lake View",
+    phNumber: "2876543210",
+    bloodGroup: "O+",
+    image: "https://loremflickr.com/160/160/person?lock=10",
+  },
+  {
+    id: 12,
+    voterID: "1223456789",
+    name: "Podrick Kulal",
+    fatherOrHusbendName: "Unknown Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Garden Area",
+    phNumber: "3765432109",
+    bloodGroup: "AB+",
+    image: "https://loremflickr.com/160/160/person?lock=11",
+  },
+  {
+    id: 13,
+    voterID: "1323456789",
+    name: "Davos Kulal",
+    fatherOrHusbendName: "Unknown Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Near School",
+    phNumber: "4654321098",
+    bloodGroup: "A-",
+    image: "https://loremflickr.com/160/160/person?lock=12",
+  },
+  {
+    id: 14,
+    voterID: "1423456789",
+    name: "Melisandre Kulal",
+    fatherOrHusbendName: "Unknown Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Near Hospital",
+    phNumber: "5543210987",
+    bloodGroup: "B-",
+    image: "https://loremflickr.com/160/160/person?lock=13",
+  },
+  {
+    id: 15,
+    voterID: "1523456789",
+    name: "Jorah Kulal",
+    fatherOrHusbendName: "Jeor Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Central Park",
+    phNumber: "6432109876",
+    bloodGroup: "O-",
+    image: "https://loremflickr.com/160/160/person?lock=14",
+  },
+  {
+    id: 16,
+    voterID: "1623456789",
+    name: "Daario Kulal",
+    fatherOrHusbendName: "Unknown Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Green Lane",
+    phNumber: "7321098765",
+    bloodGroup: "AB-",
+    image: "https://loremflickr.com/160/160/person?lock=15",
+  },
+  {
+    id: 17,
+    voterID: "1723456789",
+    name: "Missandei Kulal",
+    fatherOrHusbendName: "Unknown Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Coastal Road",
+    phNumber: "8210987654",
+    bloodGroup: "A+",
+    image: "https://loremflickr.com/160/160/person?lock=16",
+  },
+  {
+    id: 18,
+    voterID: "1823456789",
+    name: "Greyworm Kulal",
+    fatherOrHusbendName: "Unknown Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Hill Road",
+    phNumber: "9109876543",
+    bloodGroup: "B+",
+    image: "https://loremflickr.com/160/160/person?lock=17",
+  },
+  {
+    id: 19,
+    voterID: "1923456789",
+    name: "Tormund Kulal",
+    fatherOrHusbendName: "Unknown Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Mountain View",
+    phNumber: "1098765432",
+    bloodGroup: "O+",
+    image: "https://loremflickr.com/160/160/person?lock=18",
+  },
+  {
+    id: 20,
+    voterID: "2023456789",
+    name: "Ygritte Kulal",
+    fatherOrHusbendName: "Unknown Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Snowy Hill",
+    phNumber: "2109876543",
+    bloodGroup: "A+",
+    image: "https://loremflickr.com/160/160/person?lock=19",
+  },
+  {
+    id: 21,
+    voterID: "2123456789",
+    name: "Ghost Kulal",
+    fatherOrHusbendName: "Unknown Kulal",
+    address: "Bantwala, Karnataka, India, 574211, Winterfell",
+    phNumber: "3210987654",
+    bloodGroup: "B+",
+    image: "https://loremflickr.com/160/160/person?lock=20",
+  },
+];
 
 const MembersList = () => {
-  const membersInfo = {
-    id: "members-list",
-    teamName: "Kulala Sudharaka Sangha(R.) Bantwala",
-    aboutTeam:
-      "The Kulala Sudharaka Sangha (R.) Bantwala is a community organization dedicated to the welfare and development of the Kulala community in Bantwala. Our mission is to promote cultural heritage, support members in need, and foster unity among the community.",
-    members: [
-      {
-        id: "member-1",
-        name: "Sansa Kulal",
-        role: "Role One",
-        image: "https://loremflickr.com/160/160/person?lock=0",
-        bloodGroup: "A+",
-        address: "Bantwala, Karnataka",
-        phNumber: "9876543210",
-      },
-      {
-        id: "member-2",
-        name: "Arya Kulal",
-        role: "Role Two",
-        image: "https://loremflickr.com/160/160/person?lock=2",
-        bloodGroup: "B+",
-        address: "Mangalore, Karnataka",
-        phNumber: "9876543211",
-      },
-      {
-        id: "member-3",
-        name: "Jon Kulal",
-        role: "Role Three",
-        image: "https://loremflickr.com/160/160/person?lock=3",
-        bloodGroup: "O+",
-        address: "Puttur, Karnataka",
-        phNumber: "9876543212",
-      },
-      {
-        id: "member-4",
-        name: "Robb Kulal",
-        role: "Role Four",
-        image: "https://loremflickr.com/160/160/person?lock=4",
-        bloodGroup: "AB+",
-        address: "Ullal, Karnataka",
-        phNumber: "9876543213",
-      },
-      {
-        id: "member-5",
-        name: "Rickon Kulal",
-        role: "Role Five",
-        image: "https://loremflickr.com/160/160/person?lock=5",
-        bloodGroup: "A-",
-        address: "Moodbidri, Karnataka",
-        phNumber: "9876543214",
-      },
-      {
-        id: "member-6",
-        name: "Bran Kulal",
-        role: "Role Six",
-        image: "https://loremflickr.com/160/160/person?lock=6",
-        bloodGroup: "B-",
-        address: "Belthangady, Karnataka",
-        phNumber: "9876543215",
-      },
-      {
-        id: "member-7",
-        name: "Theon Kulal",
-        role: "Role Seven",
-        image: "https://loremflickr.com/160/160/person?lock=7",
-        bloodGroup: "O-",
-        address: "Karkala, Karnataka",
-        phNumber: "9876543216",
-      },
-      {
-        id: "member-8",
-        name: "Samwell Kulal",
-        role: "Role Eight",
-        image: "https://loremflickr.com/160/160/person?lock=8",
-        bloodGroup: "AB-",
-        address: "Surathkal, Karnataka",
-        phNumber: "9876543217",
-      },
-      {
-        id: "member-9",
-        name: "Gendry Kulal",
-        role: "Role Nine",
-        image: "https://loremflickr.com/160/160/person?lock=9",
-        bloodGroup: "A+",
-        address: "Bajpe, Karnataka",
-        phNumber: "9876543218",
-      },
-      {
-        id: "member-10",
-        name: "Podrick Kulal",
-        role: "Role Ten",
-        image: "https://loremflickr.com/160/160/person?lock=10",
-        bloodGroup: "B+",
-        address: "Mulki, Karnataka",
-        phNumber: "9876543219",
-      },
-      {
-        id: "member-11",
-        name: "Brienne Kulal",
-        role: "Role Eleven",
-        image: "https://loremflickr.com/160/160/person?lock=11",
-        bloodGroup: "O+",
-        address: "Venur, Karnataka",
-        phNumber: "9876543220",
-      },
-      {
-        id: "member-12",
-        name: "Davos Kulal",
-        role: "Role Twelve",
-        image: "https://loremflickr.com/160/160/person?lock=12",
-        bloodGroup: "AB+",
-        address: "Kinnigoli, Karnataka",
-        phNumber: "9876543221",
-      },
-      {
-        id: "member-13",
-        name: "Jorah Kulal",
-        role: "Role Thirteen",
-        image: "https://loremflickr.com/160/160/person?lock=13",
-        bloodGroup: "A-",
-        address: "Kateel, Karnataka",
-        phNumber: "9876543222",
-      },
-      {
-        id: "member-14",
-        name: "Missandei Kulal",
-        role: "Role Fourteen",
-        image: "https://loremflickr.com/160/160/person?lock=14",
-        bloodGroup: "B-",
-        address: "Panemangalore, Karnataka",
-        phNumber: "9876543223",
-      },
-      {
-        id: "member-15",
-        name: "Greyworm Kulal",
-        role: "Role Fifteen",
-        image: "https://loremflickr.com/160/160/person?lock=15",
-        bloodGroup: "O-",
-        address: "Vitla, Karnataka",
-        phNumber: "9876543224",
-      },
-      {
-        id: "member-16",
-        name: "Tormund Kulal",
-        role: "Role Sixteen",
-        image: "https://loremflickr.com/160/160/person?lock=16",
-        bloodGroup: "AB-",
-        address: "Beltangady, Karnataka",
-        phNumber: "9876543225",
-      },
-      {
-        id: "member-17",
-        name: "Ygritte Kulal",
-        role: "Role Seventeen",
-        image: "https://loremflickr.com/160/160/person?lock=17",
-        bloodGroup: "A+",
-        address: "Puttur, Karnataka",
-        phNumber: "9876543226",
-      },
-      {
-        id: "member-18",
-        name: "Sandor Kulal",
-        role: "Role Eighteen",
-        image: "https://loremflickr.com/160/160/person?lock=18",
-        bloodGroup: "B+",
-        address: "Bantwala, Karnataka",
-        phNumber: "9876543227",
-      },
-      {
-        id: "member-19",
-        name: "Petyr Kulal",
-        role: "Role Nineteen",
-        image: "https://loremflickr.com/160/160/person?lock=19",
-        bloodGroup: "O+",
-        address: "Mangalore, Karnataka",
-        phNumber: "9876543228",
-      },
-      {
-        id: "member-20",
-        name: "Varys Kulal",
-        role: "Role Twenty",
-        image: "https://loremflickr.com/160/160/person?lock=20",
-        bloodGroup: "AB+",
-        address: "Moodbidri, Karnataka",
-        phNumber: "9876543229",
-      },
-      {
-        id: "member-21",
-        name: "Shae Kulal",
-        role: "Role Twenty-One",
-        image: "https://loremflickr.com/160/160/person?lock=21",
-        bloodGroup: "A-",
-        address: "Ullal, Karnataka",
-        phNumber: "9876543230",
-      },
-      {
-        id: "member-22",
-        name: "Jaqen Kulal",
-        role: "Role Twenty-Two",
-        image: "https://loremflickr.com/160/160/person?lock=22",
-        bloodGroup: "B-",
-        address: "Karkala, Karnataka",
-        phNumber: "9876543231",
-      },
-      {
-        id: "member-23",
-        name: "Daario Kulal",
-        role: "Role Twenty-Three",
-        image: "https://loremflickr.com/160/160/person?lock=23",
-        bloodGroup: "O-",
-        address: "Surathkal, Karnataka",
-        phNumber: "9876543232",
-      },
-      {
-        id: "member-24",
-        name: "Gilly Kulal",
-        role: "Role Twenty-Four",
-        image: "https://loremflickr.com/160/160/person?lock=24",
-        bloodGroup: "AB-",
-        address: "Mulki, Karnataka",
-        phNumber: "9876543233",
-      },
-      {
-        id: "member-25",
-        name: "Meera Kulal",
-        role: "Role Twenty-Five",
-        image: "https://loremflickr.com/160/160/person?lock=25",
-        bloodGroup: "A+",
-        address: "Venur, Karnataka",
-        phNumber: "9876543234",
-      },
-    ],
-  };
-
   return (
-    <div className="members-list">
-      <div className="page-title">{membersInfo.teamName} Members</div>
-      <div className="about-team">
-        <p>{membersInfo.aboutTeam}</p>
+    <div className="all-members-list">
+      <div className="page-title">
+        <div className="title">Lifetime members</div>
+        <div className="search-box-container">
+          <InputBox
+            id="first-name"
+            name="first-name"
+            type={InputTypes.Text}
+            label="First Name"
+            value={""}
+            isRequired
+            setInputValue={(_value) => {}}
+          />
+        </div>
       </div>
-      <div className="members-list">
-        {membersInfo.members.map((member) => (
-          <div key={member.id} className="member-card">
+      <div className="page-description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div className="search-box-container-mobile">
+        <InputBox
+          id="first-name"
+          name="first-name"
+          type={InputTypes.Text}
+          label="First Name"
+          value={""}
+          isRequired
+          setInputValue={(_value) => {}}
+        />
+      </div>
+      <div className="members-list-container">
+        {membersInfo.map((member) => (
+          <div key={member.id} className="member-list-card">
             <img
               src={member.image}
               alt={member.name}
               className="member-image"
-              loading="lazy"
-              style={{ background: "#eee" }}
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = "";
-              }}
             />
-            <div className="member-info">
-              <div className="member-name">{member.name}</div>
-              <div className="member-role">{member.role}</div>
+            <div className="member-details">
+              <h3 className="member-name">{member.name}</h3>
+              <p className="member-role">{member.fatherOrHusbendName}</p>
+              <p className="member-address">{member.address}</p>
+              <p className="member-phone">Phone: {member.phNumber}</p>
+              <p className="member-blood-group">
+                Blood Group: {member.bloodGroup}
+              </p>
             </div>
           </div>
         ))}

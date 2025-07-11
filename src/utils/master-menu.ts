@@ -2,9 +2,10 @@ enum RoutesList {
   HOME = "/",
   NOT_FOUND = "*",
   MEMBERSHIP_REGISTRATION = "/member-registration",
-  MEMBERS_LIST = "/members-list",
+  COMMITTEE_MEMBERS = "/committee-members",
   GALLERY = "/gallery",
   CONTACT_US = "/contact-us",
+  MEMBERS_LIST = "/members-list",
 }
 
 interface SubMenuItem {
@@ -36,6 +37,7 @@ enum MenuCategories {
   // AboutUs = "About Us",
   ContactUs = "Contact Us",
   Gallery = "Gallery",
+  MembersList = "Members List",
 }
 
 enum MenuItems {
@@ -58,11 +60,15 @@ const Menu = [
     items: [
       {
         id: 11,
-        path: RoutesList.MEMBERS_LIST,
+        path: RoutesList.COMMITTEE_MEMBERS,
         name: MenuItems.KulalaSudharakaSangha,
       },
-      { id: 12, path: RoutesList.MEMBERS_LIST, name: MenuItems.Sevadala },
-      { id: 13, path: RoutesList.MEMBERS_LIST, name: MenuItems.MahilaMadali },
+      { id: 12, path: RoutesList.COMMITTEE_MEMBERS, name: MenuItems.Sevadala },
+      {
+        id: 13,
+        path: RoutesList.COMMITTEE_MEMBERS,
+        name: MenuItems.MahilaMadali,
+      },
     ],
   },
   {
@@ -77,12 +83,18 @@ const Menu = [
       },
     ],
   },
-  // {
-  //   id: 3,
-  //   category: MenuCategories.AboutUs,
-  //   hasSubCategory: false,
-  //   items: [{ id: "about-us", name: MenuCategories.AboutUs }],
-  // },
+  {
+    id: 3,
+    category: MenuCategories.MembersList,
+    hasSubCategory: false,
+    items: [
+      {
+        id: "members-list",
+        name: MenuCategories.MembersList,
+        path: RoutesList.MEMBERS_LIST,
+      },
+    ],
+  },
   {
     id: 4,
     category: MenuCategories.Gallery,

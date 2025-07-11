@@ -1,87 +1,100 @@
 @use "../../styles/variables" as var;
 
-.members-list {
-  width: 100%;
-  padding: 3rem 2rem;
+.all-members-list {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
 
   .page-title {
     font-size: var.$font-size-large;
     font-weight: bold;
     color: var.$text-color;
     margin-bottom: var.$spacing-medium;
-    // text-align: left;
-  }
-
-  .about-team {
-    width: 50%;
-    text-align: center;
-  }
-
-  .members-list {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: var.$spacing-medium;
-    flex-wrap: wrap;
+    width: 100%;
 
-    .member-card {
-      padding: 1rem;
+    .title {
+      flex: 1;
+      text-wrap: nowrap;
+      text-align: left;
+    }
+
+    .search-box-container {
+      min-width: 30%;
+    }
+  }
+
+  .page-description {
+    width: 50%;
+    text-align: left;
+  }
+
+  .search-box-container-mobile {
+    display: none;
+  }
+
+  .members-list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var.$spacing-large;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+
+    .member-list-card {
+      height: 215px;
+      display: flex;
+      border: 2px solid var.$border-color;
+      padding: 0.5rem;
+      border-radius: 10px;
+      cursor: pointer;
 
       .member-image {
-        min-width: 180px;
-        min-height: 180px;
-        max-width: 180px;
-        max-height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: var.$spacing-small;
-        filter: grayscale(100%);
-        cursor: pointer;
-
-        &:hover {
-          filter: grayscale(0%);
-        }
-      }
-
-      .member-name {
+        width: 200px;
+        height: 200px;
+        margin-right: var.$spacing-medium;
+        border-radius: 10px;
       }
 
       .member-details {
+        text-align: left;
       }
     }
   }
 }
 
-@media (max-width: 950px) {
-  .members-list {
-    flex-direction: column;
-    align-items: center;
-    gap: var.$spacing-small;
-    padding: 1rem 1rem;
+@media (max-width: 768px) {
+  .all-members-list {
+    padding: 1rem;
 
-    .title {
-      margin-bottom: unset;
+    .page-title {
+      .search-box-container {
+        display: none;
+      }
     }
-
-    .about-team {
+    .page-description {
       width: 100%;
-    }
-
-    .member-card {
-      width: 100%;
-      max-width: 300px;
-      max-height: 300px;
-      min-width: 300px;
-      min-height: 300px;
       text-align: center;
-
-      .member-image {
-        width: 80%;
-        height: auto;
+      text-align: left;
+    }
+    .search-box-container-mobile {
+      display: block;
+      margin: 1.2rem 0;
+    }
+    .members-list-container {
+      .member-list-card {
+        height: fit-content;
+        flex-direction: column;
       }
     }
   }
