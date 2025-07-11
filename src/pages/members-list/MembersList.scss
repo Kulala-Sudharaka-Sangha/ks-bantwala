@@ -26,8 +26,9 @@
   }
 
   .page-description {
-    width: 50%;
+    width: 100%;
     text-align: left;
+    font-size: 1.2rem;
   }
 
   .search-box-container-mobile {
@@ -68,9 +69,42 @@
 
       .member-details {
         text-align: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.2rem;
+
+        .name {
+          font-size: 1.4rem;
+          font-weight: bold;
+        }
+
+        .member-address {
+          max-width: 100ch;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+        }
+
+        p {
+          margin: 0.5rem;
+        }
+      }
+
+      &:hover {
+        background: rgba(var.$light-orange, 0.1);
       }
     }
   }
+}
+
+.icon {
+  width: 2rem;
+  font-size: 1.4rem;
+  padding-right: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -86,6 +120,7 @@
       width: 100%;
       text-align: center;
       text-align: left;
+      font-size: 1rem;
     }
     .search-box-container-mobile {
       display: block;
@@ -95,6 +130,18 @@
       .member-list-card {
         height: fit-content;
         flex-direction: column;
+
+        .member-details {
+          text-align: left;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          font-size: 1rem;
+
+          .name {
+            font-size: 1.2rem;
+          }
+        }
       }
     }
   }

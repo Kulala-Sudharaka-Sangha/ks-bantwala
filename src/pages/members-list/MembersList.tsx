@@ -1,6 +1,14 @@
 import "./MembersList.scss";
 import { useState } from "react";
 import InputBox, { InputTypes } from "../../components/input-box/InputBox";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAddressCard,
+  faCircleInfo,
+  faDroplet,
+  faPhone,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 
 const membersInfo = [
   {
@@ -8,7 +16,8 @@ const membersInfo = [
     voterID: "1234567890",
     name: "Sansa Kulal",
     fatherOrHusbendName: "Eddard Kulal",
-    address: "Bantwala, Karnataka, India, 574211, Near Bantwala Bus Stand",
+    address:
+      "Bantwala, Karnataka, India, 574211, Near Bantwala Bus Stand, Opposite City Mall, 2nd Floor, Room No. 204, Landmark: Next to State Bank ATM, Pincode: 574211, District: Dakshina Kannada, State: Karnataka, Country: India",
     phNumber: "9876543210",
     bloodGroup: "A+",
     image: "https://loremflickr.com/160/160/person?lock=0",
@@ -219,8 +228,6 @@ const MembersList = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredMembers, setFilteredMembers] = useState(membersInfo);
 
-  // Accept a search term and filter membersInfo by any field containing the keyword (case-insensitive)
-
   const searchHandler = (value: string) => {
     setSearchTerm(value);
     const keyword = value.toLowerCase();
@@ -251,10 +258,11 @@ const MembersList = () => {
       </div>
       <div className="page-description">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          <FontAwesomeIcon icon={faCircleInfo} className="highlight" /> Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat.
         </p>
       </div>
       <div className="search-box-container-mobile">
@@ -277,12 +285,27 @@ const MembersList = () => {
               className="member-image"
             />
             <div className="member-details">
-              <h3 className="member-name">{member.name}</h3>
-              <p className="member-role">{member.fatherOrHusbendName}</p>
-              <p className="member-address">{member.address}</p>
-              <p className="member-phone">Phone: {member.phNumber}</p>
+              <div className="member-name">
+                <p>
+                  <FontAwesomeIcon icon={faUser} className="icon" />
+                  <span className="name">{member.name}</span>
+                  <span className="member-role">
+                    &nbsp;/ {member.fatherOrHusbendName}
+                  </span>
+                </p>
+              </div>
+
+              <p className="member-address">
+                <FontAwesomeIcon icon={faAddressCard} className="icon" />
+                {member.address}
+              </p>
+              <p className="member-phone">
+                <FontAwesomeIcon icon={faPhone} className="icon" />
+                {member.phNumber}
+              </p>
               <p className="member-blood-group">
-                Blood Group: {member.bloodGroup}
+                <FontAwesomeIcon icon={faDroplet} className="icon" />
+                {member.bloodGroup}
               </p>
             </div>
           </div>
