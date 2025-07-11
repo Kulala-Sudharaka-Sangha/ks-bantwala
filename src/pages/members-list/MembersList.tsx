@@ -237,7 +237,7 @@ const MembersList = () => {
 
   return (
     <div className="members-list">
-      <div className="title">{membersInfo.teamName} Members</div>
+      <div className="page-title">{membersInfo.teamName} Members</div>
       <div className="about-team">
         <p>{membersInfo.aboutTeam}</p>
       </div>
