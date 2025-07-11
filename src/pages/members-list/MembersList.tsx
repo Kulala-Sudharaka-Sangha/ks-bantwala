@@ -1,4 +1,5 @@
 import "./MembersList.scss";
+import { useState } from "react";
 import InputBox, { InputTypes } from "../../components/input-box/InputBox";
 
 const membersInfo = [
@@ -215,19 +216,36 @@ const membersInfo = [
 ];
 
 const MembersList = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredMembers, setFilteredMembers] = useState(membersInfo);
+
+  // Accept a search term and filter membersInfo by any field containing the keyword (case-insensitive)
+
+  const searchHandler = (value: string) => {
+    setSearchTerm(value);
+    const keyword = value.toLowerCase();
+    setFilteredMembers(
+      membersInfo.filter((member) =>
+        Object.values(member).some((field) =>
+          String(field).toLowerCase().includes(keyword)
+        )
+      )
+    );
+  };
+
   return (
     <div className="all-members-list">
       <div className="page-title">
         <div className="title">Lifetime members</div>
         <div className="search-box-container">
           <InputBox
-            id="first-name"
-            name="first-name"
+            id="search"
+            name="search"
             type={InputTypes.Text}
-            label="First Name"
-            value={""}
+            label="Search"
+            value={searchTerm}
             isRequired
-            setInputValue={(_value) => {}}
+            setInputValue={(value: string) => searchHandler(value)}
           />
         </div>
       </div>
@@ -245,13 +263,13 @@ const MembersList = () => {
           name="first-name"
           type={InputTypes.Text}
           label="First Name"
-          value={""}
+          value={searchTerm}
           isRequired
-          setInputValue={(_value) => {}}
+          setInputValue={(_value) => searchHandler}
         />
       </div>
       <div className="members-list-container">
-        {membersInfo.map((member) => (
+        {filteredMembers.map((member) => (
           <div key={member.id} className="member-list-card">
             <img
               src={member.image}
