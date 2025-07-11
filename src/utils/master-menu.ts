@@ -2,6 +2,7 @@ enum RoutesList {
   HOME = "/",
   NOT_FOUND = "*",
   MEMBERSHIP_REGISTRATION = "/member-registration",
+  MEMBERS_LIST = "/members-list",
 }
 
 interface SubMenuItem {
@@ -55,10 +56,11 @@ const Menu = [
     items: [
       {
         id: 11,
+        path: RoutesList.MEMBERS_LIST,
         name: MenuItems.KulalaSudharakaSangha,
       },
-      { id: 12, name: MenuItems.Sevadala },
-      { id: 13, name: MenuItems.MahilaMadali },
+      { id: 12, path: RoutesList.MEMBERS_LIST, name: MenuItems.Sevadala },
+      { id: 13, path: RoutesList.MEMBERS_LIST, name: MenuItems.MahilaMadali },
     ],
   },
   {

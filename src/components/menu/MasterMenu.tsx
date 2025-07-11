@@ -28,6 +28,7 @@ const MasterMenu = () => {
         element.classList.add("dropdown-options");
       }, 100);
     }
+    console.log("Clicked item:", item);
     navigation.handleNavigation(item.path);
   };
 
@@ -58,7 +59,12 @@ const MasterMenu = () => {
       <div className="horizontal-menu desktop">
         <img src={BrandLogo} alt="brand-logo" className="brand-logo" />
         {Menu.map((category: MenuCategory) => (
-          <div key={category.id} className="menu-category">
+          <div
+            key={category.id}
+            className={`menu-category${
+              activeRouterPage === category.items[0].path ? " active" : ""
+            }`}
+          >
             {!category.hasSubCategory && (
               <>
                 {category.items.length <= 1 && (

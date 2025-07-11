@@ -56,11 +56,19 @@
   .menu-category {
     position: relative;
     cursor: pointer;
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
+    opacity: 0.8;
 
     &:hover {
-      border-bottom: 2px solid var.$primary-color;
+      opacity: 1;
+      // color: var.$orange;
     }
+  }
+
+  .active {
+    opacity: 1;
+    border-bottom: 4px solid var.$orange;
+    // color: var.$orange;
   }
 
   .menu-category h3 {

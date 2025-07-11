@@ -1,0 +1,88 @@
+@use "../../styles/variables" as var;
+
+.members-list {
+  width: 100%;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    font-size: var.$font-size-large;
+    font-weight: bold;
+    color: var.$text-color;
+    margin-bottom: var.$spacing-medium;
+    // text-align: left;
+  }
+
+  .about-team {
+    width: 50%;
+    text-align: center;
+  }
+
+  .members-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var.$spacing-medium;
+    flex-wrap: wrap;
+
+    .member-card {
+      padding: 1rem;
+
+      .member-image {
+        min-width: 180px;
+        min-height: 180px;
+        max-width: 180px;
+        max-height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: var.$spacing-small;
+        filter: grayscale(100%);
+        cursor: pointer;
+
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+
+      .member-name {
+      }
+
+      .member-details {
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .members-list {
+    flex-direction: column;
+    align-items: center;
+    gap: var.$spacing-small;
+    padding: 1rem 1rem;
+
+    .title {
+      margin-bottom: unset;
+    }
+
+    .about-team {
+      width: 100%;
+    }
+
+    .member-card {
+      width: 100%;
+      max-width: 300px;
+      max-height: 300px;
+      min-width: 300px;
+      min-height: 300px;
+      text-align: center;
+
+      .member-image {
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+}
