@@ -237,23 +237,38 @@ const CommitteeMembers = () => {
 
   return (
     <div className="members-list">
-      <div className="page-title">{membersInfo.teamName} Members</div>
+      <div className="page-title">
+        {membersInfo.teamName}
+        <span className="highlight"> Members</span>
+      </div>
       <div className="about-team">
         <p>{membersInfo.aboutTeam}</p>
       </div>
       <div className="members-list">
-        {membersInfo.members.map((member) => (
+        {membersInfo.members.map((member, index) => (
           <div key={member.id} className="member-card">
-            <img
-              src={member.image}
-              alt={member.name}
-              className="member-image"
-              loading="lazy"
-              style={{ background: "#eee" }}
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = "";
-              }}
-            />
+            <div
+              className={`member-image-container ${
+                index === 0
+                  ? "red-border"
+                  : index === 1
+                  ? "orange-border"
+                  : index === 2
+                  ? "green-border"
+                  : ""
+              }`}
+            >
+              <img
+                src={member.image}
+                alt={member.name}
+                className="member-image"
+                loading="lazy"
+                style={{ background: "#eee" }}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "";
+                }}
+              />
+            </div>
             <div className="member-info">
               <div className="member-name">{member.name}</div>
               <div className="member-role">{member.role}</div>

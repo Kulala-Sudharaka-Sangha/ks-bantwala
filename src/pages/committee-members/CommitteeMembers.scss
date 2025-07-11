@@ -17,6 +17,7 @@
   .about-team {
     width: 50%;
     text-align: center;
+    font-size: 1.2rem;
   }
 
   .members-list {
@@ -29,27 +30,66 @@
 
     .member-card {
       padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      .member-image {
-        min-width: 180px;
-        min-height: 180px;
-        max-width: 180px;
-        max-height: 180px;
+      .member-image-container {
+        min-width: 190px;
+        min-height: 190px;
+        max-width: 190px;
+        max-height: 190px;
         border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: var.$spacing-small;
-        filter: grayscale(100%);
-        cursor: pointer;
 
-        &:hover {
-          filter: grayscale(0%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .member-image {
+          min-width: 180px;
+          min-height: 180px;
+          max-width: 180px;
+          max-height: 180px;
+          border-radius: 50%;
+          margin-top: 4px;
+          object-fit: cover;
+          margin-bottom: var.$spacing-small;
+          filter: grayscale(100%);
+          cursor: pointer;
+
+          &:hover {
+            filter: grayscale(0%);
+          }
         }
       }
 
-      .member-name {
+      .red-border {
+        border: 4px solid var.$red;
       }
 
-      .member-details {
+      .green-border {
+        border: 4px solid var.$green;
+      }
+
+      .orange-border {
+        border: 4px solid var.$orange;
+      }
+
+      .light-orange-border {
+        border: 4px solid var.$yellow;
+      }
+
+      .member-info {
+        margin-top: 0.8rem;
+
+        .member-name {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+
+        .member-details {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -62,12 +102,13 @@
     gap: var.$spacing-small;
     padding: 1rem 1rem;
 
-    .title {
+    .page-title {
       margin-bottom: unset;
     }
 
     .about-team {
       width: 100%;
+      font-size: 1rem;
     }
 
     .member-card {
@@ -84,4 +125,8 @@
       }
     }
   }
+}
+
+.highlight {
+  color: var.$orange;
 }
