@@ -7,6 +7,7 @@ import CommitteeMembers from "../pages/committee-members/CommitteeMembers";
 import { Gallery } from "../pages/gallery/Gallery";
 import ContactPage from "../pages/contact-page/ContactPage";
 import MembersList from "../pages/members-list/MembersList";
+import NotFound from "../pages/not-found/NotFound";
 
 const appRouter = createBrowserRouter([
   {
@@ -39,7 +40,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: RoutesList.NOT_FOUND,
-        element: <div>Not Found</div>,
+        element: <NotFound />,
       },
     ],
   },

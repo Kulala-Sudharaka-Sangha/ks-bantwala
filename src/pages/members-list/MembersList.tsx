@@ -9,6 +9,7 @@ import {
   faPhone,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import NotFound from "../not-found/NotFound";
 
 const membersInfo = [
   {
@@ -251,7 +252,6 @@ const MembersList = () => {
             type={InputTypes.Text}
             label="Search"
             value={searchTerm}
-            isRequired
             setInputValue={(value: string) => searchHandler(value)}
           />
         </div>
@@ -267,13 +267,12 @@ const MembersList = () => {
       </div>
       <div className="search-box-container-mobile">
         <InputBox
-          id="first-name"
-          name="first-name"
+          id="search"
+          name="search"
           type={InputTypes.Text}
-          label="First Name"
+          label="Search"
           value={searchTerm}
-          isRequired
-          setInputValue={(_value) => searchHandler}
+          setInputValue={(value: string) => searchHandler(value)}
         />
       </div>
       <div className="members-list-container">
@@ -311,6 +310,16 @@ const MembersList = () => {
           </div>
         ))}
       </div>
+      {!filteredMembers.length && (
+        <NotFound
+          message={
+            <>
+              No member data found for{" "}
+              <span className="highlight">{searchTerm}</span>
+            </>
+          }
+        />
+      )}
     </div>
   );
 };
