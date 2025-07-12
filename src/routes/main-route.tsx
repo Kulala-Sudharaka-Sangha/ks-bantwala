@@ -8,6 +8,7 @@ import { Gallery } from "../pages/gallery/Gallery";
 import ContactPage from "../pages/contact-page/ContactPage";
 import MembersList from "../pages/members-list/MembersList";
 import NotFound from "../pages/not-found/NotFound";
+import PastMembersList from "../pages/past-members-list/PastMembersList";
 
 const appRouter = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const appRouter = createBrowserRouter([
       {
         path: RoutesList.NOT_FOUND,
         element: <NotFound />,
+      },
+      {
+        path: RoutesList.PAST_COMMITTEE_MEMBERS,
+        element: <PastMembersList />,
       },
     ],
   },

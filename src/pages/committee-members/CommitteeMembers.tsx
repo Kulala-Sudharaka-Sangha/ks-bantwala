@@ -3,7 +3,7 @@ import "./CommitteeMembers.scss";
 const CommitteeMembers = () => {
   const membersInfo = {
     id: "members-list",
-    teamName: "Kulala Sudharaka Sangha(R.) Bantwala",
+    teamName: "2025-26 Kulala Sudharaka Sangha(R.) Bantwala Committee",
     aboutTeam:
       "The Kulala Sudharaka Sangha (R.) Bantwala is a community organization dedicated to the welfare and development of the Kulala community in Bantwala. Our mission is to promote cultural heritage, support members in need, and foster unity among the community.",
     members: [
