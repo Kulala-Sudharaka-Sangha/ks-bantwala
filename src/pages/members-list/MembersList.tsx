@@ -7,6 +7,7 @@ import {
   faCircleInfo,
   faDroplet,
   faPhone,
+  faSearch,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import NotFound from "../not-found/NotFound";
@@ -252,6 +253,8 @@ const MembersList = () => {
             type={InputTypes.Text}
             label="Search"
             value={searchTerm}
+            showUnitIcon={true}
+            iconName={faSearch}
             setInputValue={(value: string) => searchHandler(value)}
           />
         </div>

@@ -20,7 +20,7 @@
     transition: all 0.3s ease;
 
     &:focus {
-      border-color: var.$primary-color;
+      border-color: var.$black;
       box-shadow: 0 0 4px var.$secondary-color;
       background: var.$white;
     }
@@ -51,7 +51,7 @@
     position: absolute;
     right: 12px;
     font-size: 14px;
-    color: var.$primary-color;
+    color: var.$black;
   }
 
   .file-label {
@@ -75,8 +75,8 @@
     }
 
     &:hover {
-      background-color: var.$primary-color;
-      border: 1px solid var.$primary-color;
+      background-color: var.$black;
+      border: 1px solid var.$black;
       color: var.$gray;
       box-shadow: 0 0 4px var.$secondary-color;
     }
@@ -103,7 +103,7 @@
 }
 
 .dropdown-select:focus {
-  border-color: var.$primary-color;
+  border-color: var.$black;
   box-shadow: 0 0 4px var.$secondary-color;
   background-color: var.$white;
 }
@@ -151,7 +151,7 @@
   padding: 10px;
   font-size: 16px;
   background-color: var.$white; /* White background */
-  color: var.$primary-color;
+  color: var.$black;
   border: none;
   outline: none;
   cursor: pointer;
