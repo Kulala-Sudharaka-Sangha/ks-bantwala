@@ -4,7 +4,7 @@ import animationData from "../../assets/lottie/no-data-anim.json";
 import { ReactNode } from "react";
 
 interface NotFoundProps {
-  message: ReactNode;
+  message?: ReactNode;
 }
 
 const NotFound = ({ message }: NotFoundProps) => {
