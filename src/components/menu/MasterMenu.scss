@@ -170,6 +170,10 @@
         font-weight: 800;
         white-space: nowrap;
       }
+
+      .active {
+        border-bottom: unset;
+      }
     }
   }
 }
