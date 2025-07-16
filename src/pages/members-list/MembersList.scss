@@ -53,16 +53,16 @@
     }
 
     .member-list-card {
-      height: 215px;
+      height: 198px;
       display: flex;
       border: 2px solid var.$border-color;
       padding: 0.5rem;
-      border-radius: 10px;
+      border-radius: 8px;
       cursor: pointer;
 
       .member-image {
-        width: 200px;
-        height: 200px;
+        width: 178px;
+        height: 178px;
         margin-right: var.$spacing-medium;
         border-radius: 10px;
       }
@@ -70,12 +70,12 @@
       .member-details {
         text-align: left;
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         flex-direction: column;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
 
         .name {
-          font-size: 1.4rem;
+          font-size: 0.8rem;
           font-weight: bold;
         }
 
@@ -87,6 +87,7 @@
           display: -webkit-box;
           -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
+          max-height: 3rem;
         }
 
         p {
@@ -102,9 +103,9 @@
 }
 
 .icon {
-  width: 2rem;
+  width: 0.8rem;
   font-size: 1.4rem;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
 }
 
 @media (max-width: 768px) {
