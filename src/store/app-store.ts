@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import uiControlsReducers from "./slices/ui-controls.ts";
+import dataReducer from "./slices/data-slice.ts";
 
 const appStore = configureStore({
   reducer: {
     uiControls: uiControlsReducers,
+    data: dataReducer,
   },
 });
 

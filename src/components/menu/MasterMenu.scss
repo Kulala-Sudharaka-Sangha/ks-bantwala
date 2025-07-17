@@ -9,7 +9,7 @@
 
   .language-selector {
     margin-left: auto;
-    font-size: 2rem;
+    font-size: 1.2rem;
     padding: 0;
     align-items: center;
     justify-content: center;
@@ -38,12 +38,13 @@
   .horizontal-menu.desktop {
     display: flex;
     background-color: var.$primary-color;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     color: var.$text-color;
     gap: 2rem;
     padding: 0 1rem;
     font-weight: 600;
-    font-size: 1.2rem;
-    height: 3.8rem;
+    font-size: 0.9rem;
+    height: 3rem;
 
     .brand-logo {
       width: 3.5rem;
@@ -97,7 +98,7 @@
   .menu-category li {
     padding: 8px 12px;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     cursor: pointer;
   }
 
@@ -166,7 +167,7 @@
       padding: 1rem;
 
       .brand-name {
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 800;
         white-space: nowrap;
       }
@@ -176,4 +177,9 @@
       }
     }
   }
+}
+
+.site-header-img {
+  width: 100%;
+  padding-left: 0.8rem;
 }
