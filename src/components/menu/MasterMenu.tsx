@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage, faList } from "@fortawesome/free-solid-svg-icons";
 import { toggleDrawerMenu } from "../../store/slices/ui-controls";
 import BrandLogo from "../../assets/kulal-logo.png";
+import SiteHeader from "../../assets/site-header.png";
 
 const MasterMenu = () => {
   const dispatch = useDispatch();
@@ -46,7 +47,9 @@ const MasterMenu = () => {
             }}
           />
         </div>
-        <div className="brand-name">ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)</div>
+        <div className="brand-name">
+          <img src={SiteHeader} alt="brand-logo" className="site-header-img" />
+        </div>
         <div className="language-selector">
           {/* <FontAwesomeIcon
             icon={faLanguage}

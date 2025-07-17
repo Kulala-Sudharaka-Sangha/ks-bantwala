@@ -21,7 +21,7 @@ async function importCommittee() {
   });
 
   const batch = db.batch();
-  for (const member of committee["members-list"]) {
+  for (const member of committee.membersList) {
     const memberRef = docRef.collection("members").doc(member.id);
     batch.set(memberRef, member);
   }
@@ -40,7 +40,7 @@ async function importSevadala() {
   });
 
   const batch = db.batch();
-  for (const member of sevadala["members-list"]) {
+  for (const member of sevadala.membersList) {
     const memberRef = docRef.collection("members").doc(member.id);
     batch.set(memberRef, member);
   }
@@ -59,7 +59,7 @@ async function importMahila() {
   });
 
   const batch = db.batch();
-  for (const member of mahila["members-list"]) {
+  for (const member of mahila.membersList) {
     const memberRef = docRef.collection("members").doc(member.id);
     batch.set(memberRef, member);
   }
@@ -69,7 +69,7 @@ async function importMahila() {
 
 // ---- LIFETIME MEMBERS ----
 async function importLifetime() {
-  const lifetime = data["life-time-members-list-info"]["members-list"];
+  const lifetime = data["life-time-members-list-info"].membersList;
   const batch = db.batch();
 
   for (const member of lifetime) {

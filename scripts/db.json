@@ -3,7 +3,7 @@
     "id": "committee-members",
     "teamName": "2025-26 Kulala Sudharaka Sangha(R.) Bantwala Committee",
     "aboutTeam": "The Kulala Sudharaka Sangha (R.) Bantwala is a community organization dedicated to the welfare and development of the Kulala community in Bantwala. Our mission is to promote cultural heritage, support members in need, and foster unity among the community.",
-    "members-list": [
+    "membersList": [
       {
         "id": "member-1",
         "name": "Sansa P Kulal",
@@ -28,7 +28,7 @@
     "id": "sevadala-members",
     "teamName": "Kulala Sevadala Bantwala 2025-26 members",
     "aboutTeam": "The Kulala Sudharaka Sangha (R.) Bantwala is a community organization dedicated to the welfare and development of the Kulala community in Bantwala. Our mission is to promote cultural heritage, support members in need, and foster unity among the community.",
-    "members-list": [
+    "membersList": [
       {
         "id": "member-1",
         "name": "Sansa Kulal",
@@ -53,7 +53,7 @@
     "id": "mahila-mandali-members",
     "teamName": "Kulala Sevadala Bantwala 2025-26 members",
     "aboutTeam": "The Kulala Sudharaka Sangha (R.) Bantwala is a community organization dedicated to the welfare and development of the Kulala community in Bantwala. Our mission is to promote cultural heritage, support members in need, and foster unity among the community.",
-    "members-list": [
+    "membersList": [
       {
         "id": "member-1",
         "name": "Sansa Kulal",
@@ -76,7 +76,7 @@
   },
   "life-time-members-list-info": {
     "id": "members-list",
-    "members-list": [
+    "membersList": [
       {
         "id": 1,
         "voterID": "1234567890",
