@@ -1,7 +1,7 @@
 // src/features/data/dataSlice.ts
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../../firebase";
+import { db } from "../../firebase";
 
 export interface Item {
   id: string;
