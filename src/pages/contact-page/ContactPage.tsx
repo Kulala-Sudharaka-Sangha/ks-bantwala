@@ -7,7 +7,7 @@ const ContactPage = () => {
       <div className="contact-page">
         <div className="form-section">
           <h2>Contact With Us</h2>
-          <p>If you have any questions please feel free to contact with us.</p>
+          <p>If you have any questions please feel free to contact us.</p>
           <form>
             <div className="form-row">
               <input type="text" placeholder="Name" />

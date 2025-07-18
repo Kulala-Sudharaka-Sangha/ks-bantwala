@@ -66,7 +66,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faInstagram} title="Instagram" />
           </a>
           <a
-            href="https://www.youtube.com"
+            href="https://youtube.com/@kulalasevadala?si=NIR2pQ9GaT2K6emc"
             target="_blank"
             rel="noopener noreferrer"
           >
