@@ -81,6 +81,19 @@ async function importLifetime() {
   console.log("✅ Lifetime members imported.");
 }
 
+async function importPastMembers() {
+  const pastMembers = data["past-members-info"].membersList;
+  const batch = db.batch();
+
+  for (const member of pastMembers) {
+    const memberRef = db.collection("past-members").doc(member.id);
+    batch.set(memberRef, member);
+  }
+
+  await batch.commit();
+  console.log("✅ Past members imported.");
+}
+
 // ---- RUN ALL ----
 (async () => {
   try {
@@ -88,6 +101,7 @@ async function importLifetime() {
     await importSevadala();
     await importMahila();
     await importLifetime();
+    await importPastMembers();
     console.log("🎉 All data imported to Firestore successfully!");
   } catch (err) {
     console.error("❌ Error importing:", err);
