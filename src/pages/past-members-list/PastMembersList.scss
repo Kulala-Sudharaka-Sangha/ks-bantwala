@@ -49,6 +49,10 @@
       }
 
       tr {
+        &:first-child {
+          background-color: #a8f7bc;
+          font-weight: 600;
+        }
         &:hover {
           background-color: rgba(var.$light-orange, 0.3) !important;
         }

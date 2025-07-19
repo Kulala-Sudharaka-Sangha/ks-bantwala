@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
+  overflow: hidden;
 
   .section-header {
     font-size: 1.8rem;
@@ -13,12 +15,14 @@
   }
 
   .activities-list-container {
-    // width: 100%;
+    width: 100%;
     max-width: 90rem;
     display: flex;
     gap: 2.8rem;
+    overflow: hidden;
     overflow-x: scroll;
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 }
