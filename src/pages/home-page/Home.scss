@@ -1,94 +1,98 @@
-.home {
-  background-image: url("../../assets/kulala-samudaya-bhavana.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.home-page {
   width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
 
-  // Overlay for background image opacity
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+  .home {
+    background-image: url("../../assets/kulala-samudaya-bhavana.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
-    background: rgba(34, 27, 27, 0.937); // Adjust opacity here
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  // Ensure content is above the overlay
-  > * {
+    height: 100vh;
     position: relative;
-    z-index: 2;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(243, 243, 243, 0.1);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .page-information {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    font-size: 1.2rem;
-    text-align: center;
-    z-index: 2;
-    flex-direction: column;
-    max-width: 68rem;
-    line-height: 2.5rem;
+    padding: 2rem;
 
-    .brand-logo {
-      width: 15em;
-      height: 15rem;
-      object-fit: cover;
-      margin-bottom: 0.5rem;
+    // Overlay for background image opacity
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(34, 27, 27, 0.937); // Adjust opacity here
+      z-index: 1;
+      pointer-events: none;
     }
 
-    .welcome-message {
-      font-weight: 400;
-      .highlight {
-        color: #ff9800; // Example highlight color
-        font-weight: 700;
-      }
+    // Ensure content is above the overlay
+    > * {
+      position: relative;
+      z-index: 2;
     }
 
-    .info-title {
-      font-size: 1.8rem;
-      font-weight: 800;
-      margin-top: 1rem;
-      line-height: 2.2rem;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(243, 243, 243, 0.1);
+      pointer-events: none;
+      z-index: 0;
     }
 
-    .btn {
-      padding: 0.8rem 1.5rem;
-      background-color: #ff9800; // Example button color
+    .page-information {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #ffffff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s;
-      width: unset;
+      font-size: 1.2rem;
+      text-align: center;
+      z-index: 2;
+      flex-direction: column;
+      max-width: 68rem;
+      line-height: 2.5rem;
 
-      &:hover {
-        opacity: 0.8;
+      .brand-logo {
+        width: 15em;
+        height: 15rem;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+      }
+
+      .welcome-message {
+        font-weight: 400;
+        .highlight {
+          color: #ff9800; // Example highlight color
+          font-weight: 700;
+        }
+      }
+
+      .info-title {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-top: 1rem;
+        line-height: 2.2rem;
+      }
+
+      .btn {
+        padding: 0.8rem 1.5rem;
+        background-color: #ff9800; // Example button color
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+        width: unset;
+
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
   }

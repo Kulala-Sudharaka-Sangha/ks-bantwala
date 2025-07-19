@@ -1,0 +1,24 @@
+.activities-section {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .section-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    text-align: left;
+  }
+
+  .activities-list-container {
+    // width: 100%;
+    max-width: 90rem;
+    display: flex;
+    gap: 2.8rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none;
+  }
+}

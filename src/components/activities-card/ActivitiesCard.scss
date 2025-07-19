@@ -1,0 +1,46 @@
+.activity-card {
+  // background: #cfc3c3;
+  max-width: 28rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  .header-image {
+    width: 100%;
+
+    img {
+      width: 28rem;
+      height: 18rem;
+    }
+  }
+
+  .activity-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 1.8rem;
+    gap: 0.8rem;
+
+    .date {
+      margin-top: 1rem;
+      background-color: rgb(130, 214, 224);
+      height: 2.2rem;
+      padding: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .activity-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .activity-description {
+      text-align: left;
+      font-size: 1.2rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
