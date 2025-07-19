@@ -1,3 +1,5 @@
+@use "../../styles/variables" as var;
+
 .activity-card {
   // background: #cfc3c3;
   max-width: 28rem;
@@ -24,12 +26,18 @@
 
     .date {
       margin-top: 1rem;
-      background-color: rgb(130, 214, 224);
+      background-color: var.$orange;
       height: 2.2rem;
       padding: 0.8rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 6px;
+
+      span {
+        margin-top: 0.1rem;
+        font-weight: 600;
+      }
     }
 
     .activity-title {

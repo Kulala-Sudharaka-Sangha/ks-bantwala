@@ -9,7 +9,7 @@
 
   .language-selector {
     margin-left: auto;
-    font-size: 1.2rem;
+    font-size: 2rem;
     padding: 0;
     align-items: center;
     justify-content: center;
@@ -43,8 +43,8 @@
     gap: 2rem;
     padding: 0 1rem;
     font-weight: 600;
-    font-size: 0.9rem;
-    height: 3rem;
+    font-size: 1.2rem;
+    height: 3.8rem;
 
     .brand-logo {
       width: 3.5rem;
@@ -98,7 +98,7 @@
   .menu-category li {
     padding: 8px 12px;
     text-align: left;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     cursor: pointer;
   }
 
@@ -167,7 +167,7 @@
       padding: 1rem;
 
       .brand-name {
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: 800;
         white-space: nowrap;
       }

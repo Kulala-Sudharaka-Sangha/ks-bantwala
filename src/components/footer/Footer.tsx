@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faTools } from "@fortawesome/free-solid-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import {
-  faFacebook,
-  faTwitter,
+  // faFacebook,
+  // faTwitter,
+  // faWhatsapp,
   faInstagram,
   faYoutube,
-  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
@@ -44,20 +44,20 @@ const Footer = () => {
       <div className="social-follow">
         <span className="follow-text">Follow Us On</span>
         <div className="social-icons">
-          <a
+          {/* <a
             href="https://www.facebook.com/kulala_sevadala"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faFacebook} title="Facebook" />
-          </a>
-          <a
+          </a> */}
+          {/* <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faTwitter} title="Twitter" />
-          </a>
+          </a> */}
           <a
             href="https://www.instagram.com/kulala_sevadala?igsh=djY2aGd6eDk3bzlj"
             target="_blank"
@@ -72,13 +72,13 @@ const Footer = () => {
           >
             <FontAwesomeIcon icon={faYoutube} title="YouTube" />
           </a>
-          <a
+          {/* <a
             href="https://wa.me/919876543210"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faWhatsapp} title="WhatsApp" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
