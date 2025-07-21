@@ -79,7 +79,7 @@
     "membersList": [
       {
         "id": 1,
-        "voterID": "1234567890",
+        "membershipNumber": "1234567890",
         "name": "Sansa Kulal",
         "fatherOrHusbandName": "Eddard Kulal",
         "address": "Bantwala, Karnataka, India, 574211, Near Bantwala Bus Stand, Opposite City Mall, 2nd Floor, Room No. 204, Landmark: Next to State Bank ATM, Pincode: 574211, District: Dakshina Kannada, State: Karnataka, Country: India",
@@ -89,7 +89,7 @@
       },
       {
         "id": 2,
-        "voterID": "2345678901",
+        "membershipNumber": "2345678901",
         "name": "Arya Kulal",
         "fatherOrHusbandName": "Eddard Kulal",
         "address": "Bantwala, Karnataka, India, 574211, Near Market",

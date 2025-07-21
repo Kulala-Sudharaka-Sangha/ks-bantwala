@@ -3,9 +3,10 @@ import { useState } from "react";
 import InputBox, { InputTypes } from "../../components/input-box/InputBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faAddressCard,
   faCircleInfo,
   faDroplet,
+  faIdCard,
+  faLocationDot,
   faPhone,
   faSearch,
   faUser,
@@ -15,7 +16,7 @@ import NotFound from "../not-found/NotFound";
 const membersInfo = [
   {
     id: 1,
-    voterID: "1234567890",
+    membershipNumber: "1234567890",
     name: "Sansa Kulal",
     fatherOrHusbendName: "Eddard Kulal",
     address:
@@ -26,7 +27,7 @@ const membersInfo = [
   },
   {
     id: 2,
-    voterID: "2345678901",
+    membershipNumber: "2345678901",
     name: "Arya Kulal",
     fatherOrHusbendName: "Eddard Kulal",
     address: "Bantwala, Karnataka, India, 574211, Near Market",
@@ -36,7 +37,7 @@ const membersInfo = [
   },
   {
     id: 3,
-    voterID: "3456789012",
+    membershipNumber: "3456789012",
     name: "Bran Kulal",
     fatherOrHusbendName: "Eddard Kulal",
     address: "Bantwala, Karnataka, India, 574211, Main Road",
@@ -46,7 +47,7 @@ const membersInfo = [
   },
   {
     id: 4,
-    voterID: "4567890123",
+    membershipNumber: "4567890123",
     name: "Robb Kulal",
     fatherOrHusbendName: "Eddard Kulal",
     address: "Bantwala, Karnataka, India, 574211, Near Temple",
@@ -56,7 +57,7 @@ const membersInfo = [
   },
   {
     id: 5,
-    voterID: "5678901234",
+    membershipNumber: "5678901234",
     name: "Jon Kulal",
     fatherOrHusbendName: "Rhaegar Kulal",
     address: "Bantwala, Karnataka, India, 574211, Hilltop",
@@ -66,7 +67,7 @@ const membersInfo = [
   },
   {
     id: 6,
-    voterID: "6789012345",
+    membershipNumber: "6789012345",
     name: "Rickon Kulal",
     fatherOrHusbendName: "Eddard Kulal",
     address: "Bantwala, Karnataka, India, 574211, Riverside",
@@ -76,7 +77,7 @@ const membersInfo = [
   },
   {
     id: 7,
-    voterID: "7890123456",
+    membershipNumber: "7890123456",
     name: "Catelyn Kulal",
     fatherOrHusbendName: "Hoster Kulal",
     address: "Bantwala, Karnataka, India, 574211, South Street",
@@ -86,7 +87,7 @@ const membersInfo = [
   },
   {
     id: 8,
-    voterID: "8901234567",
+    membershipNumber: "8901234567",
     name: "Theon Kulal",
     fatherOrHusbendName: "Balon Kulal",
     address: "Bantwala, Karnataka, India, 574211, North Street",
@@ -96,7 +97,7 @@ const membersInfo = [
   },
   {
     id: 9,
-    voterID: "9012345678",
+    membershipNumber: "9012345678",
     name: "Samwell Kulal",
     fatherOrHusbendName: "Randyll Kulal",
     address: "Bantwala, Karnataka, India, 574211, East End",
@@ -106,7 +107,7 @@ const membersInfo = [
   },
   {
     id: 10,
-    voterID: "0123456789",
+    membershipNumber: "0123456789",
     name: "Gilly Kulal",
     fatherOrHusbendName: "Craster Kulal",
     address: "Bantwala, Karnataka, India, 574211, West End",
@@ -116,7 +117,7 @@ const membersInfo = [
   },
   {
     id: 11,
-    voterID: "1123456789",
+    membershipNumber: "1123456789",
     name: "Brienne Kulal",
     fatherOrHusbendName: "Selwyn Kulal",
     address: "Bantwala, Karnataka, India, 574211, Lake View",
@@ -126,7 +127,7 @@ const membersInfo = [
   },
   {
     id: 12,
-    voterID: "1223456789",
+    membershipNumber: "1223456789",
     name: "Podrick Kulal",
     fatherOrHusbendName: "Unknown Kulal",
     address: "Bantwala, Karnataka, India, 574211, Garden Area",
@@ -136,7 +137,7 @@ const membersInfo = [
   },
   {
     id: 13,
-    voterID: "1323456789",
+    membershipNumber: "1323456789",
     name: "Davos Kulal",
     fatherOrHusbendName: "Unknown Kulal",
     address: "Bantwala, Karnataka, India, 574211, Near School",
@@ -146,7 +147,7 @@ const membersInfo = [
   },
   {
     id: 14,
-    voterID: "1423456789",
+    membershipNumber: "1423456789",
     name: "Melisandre Kulal",
     fatherOrHusbendName: "Unknown Kulal",
     address: "Bantwala, Karnataka, India, 574211, Near Hospital",
@@ -156,7 +157,7 @@ const membersInfo = [
   },
   {
     id: 15,
-    voterID: "1523456789",
+    membershipNumber: "1523456789",
     name: "Jorah Kulal",
     fatherOrHusbendName: "Jeor Kulal",
     address: "Bantwala, Karnataka, India, 574211, Central Park",
@@ -166,7 +167,7 @@ const membersInfo = [
   },
   {
     id: 16,
-    voterID: "1623456789",
+    membershipNumber: "1623456789",
     name: "Daario Kulal",
     fatherOrHusbendName: "Unknown Kulal",
     address: "Bantwala, Karnataka, India, 574211, Green Lane",
@@ -176,7 +177,7 @@ const membersInfo = [
   },
   {
     id: 17,
-    voterID: "1723456789",
+    membershipNumber: "1723456789",
     name: "Missandei Kulal",
     fatherOrHusbendName: "Unknown Kulal",
     address: "Bantwala, Karnataka, India, 574211, Coastal Road",
@@ -186,7 +187,7 @@ const membersInfo = [
   },
   {
     id: 18,
-    voterID: "1823456789",
+    membershipNumber: "1823456789",
     name: "Greyworm Kulal",
     fatherOrHusbendName: "Unknown Kulal",
     address: "Bantwala, Karnataka, India, 574211, Hill Road",
@@ -196,7 +197,7 @@ const membersInfo = [
   },
   {
     id: 19,
-    voterID: "1923456789",
+    membershipNumber: "1923456789",
     name: "Tormund Kulal",
     fatherOrHusbendName: "Unknown Kulal",
     address: "Bantwala, Karnataka, India, 574211, Mountain View",
@@ -206,7 +207,7 @@ const membersInfo = [
   },
   {
     id: 20,
-    voterID: "2023456789",
+    membershipNumber: "2023456789",
     name: "Ygritte Kulal",
     fatherOrHusbendName: "Unknown Kulal",
     address: "Bantwala, Karnataka, India, 574211, Snowy Hill",
@@ -216,7 +217,7 @@ const membersInfo = [
   },
   {
     id: 21,
-    voterID: "2123456789",
+    membershipNumber: "2123456789",
     name: "Ghost Kulal",
     fatherOrHusbendName: "Unknown Kulal",
     address: "Bantwala, Karnataka, India, 574211, Winterfell",
@@ -297,8 +298,15 @@ const MembersList = () => {
                 </p>
               </div>
 
+              <div className="member-name">
+                <p>
+                  <FontAwesomeIcon icon={faIdCard} className="icon" />
+                  <span className="member-role">{member.membershipNumber}</span>
+                </p>
+              </div>
+
               <p className="member-address">
-                <FontAwesomeIcon icon={faAddressCard} className="icon" />
+                <FontAwesomeIcon icon={faLocationDot} className="icon" />
                 {member.address}
               </p>
               <p className="member-phone">
