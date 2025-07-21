@@ -257,7 +257,7 @@ const MembershipRegistration = () => {
               />
             )}
           </div>
-          <div className="input-row">
+          <div className="input-row declaration">
             <CheckBox
               id="accept-declaration"
               name="accept-declaration"

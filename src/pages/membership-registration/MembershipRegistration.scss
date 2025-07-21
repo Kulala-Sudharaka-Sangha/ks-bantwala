@@ -82,7 +82,17 @@
 
         @media screen and (max-width: 768px) {
           flex-direction: column;
-          gap: 1rem;
+          gap: 2rem;
+        }
+      }
+
+      .declaration {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+
+        .checkbox-label {
+          text-align: left;
         }
       }
 
