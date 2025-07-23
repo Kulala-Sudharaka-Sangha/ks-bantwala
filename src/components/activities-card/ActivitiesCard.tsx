@@ -4,7 +4,7 @@ export const ActivitiesCard = () => {
   return (
     <div className="activity-card">
       <div className="header-image">
-        <img src="https://loremflickr.com/160/160/person?lock=10" alt="" />
+        <img src="https://picsum.photos/160/160?random=2" alt="" />
       </div>
       <div className="activity-info">
         <div className="date">
