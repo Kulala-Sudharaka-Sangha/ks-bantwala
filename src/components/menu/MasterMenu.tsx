@@ -2,12 +2,22 @@ import "./MasterMenu.scss";
 import DrawerMenu from "./DrawerMenu";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../store/app-store";
-import { MenuItem, Menu, MenuCategory } from "../../utils/master-menu";
+import {
+  MenuItem,
+  Menu,
+  MenuCategory,
+  RoutesList,
+  CommitteeNames,
+  MenuItems,
+} from "../../utils/master-menu";
 import useNavigation from "../../hooks/useNavigation";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage, faList } from "@fortawesome/free-solid-svg-icons";
-import { toggleDrawerMenu } from "../../store/slices/ui-controls";
+import {
+  setActiveCommitteePage,
+  toggleDrawerMenu,
+} from "../../store/slices/ui-controls";
 import BrandLogo from "../../assets/kulal-logo.png";
 import SiteHeader from "../../assets/site-header.png";
 
@@ -29,7 +39,18 @@ const MasterMenu = () => {
         element.classList.add("dropdown-options");
       }, 100);
     }
-    console.log("Clicked item:", item);
+    if (item.path === RoutesList.COMMITTEE_MEMBERS) {
+      const committeeMap: Record<string, CommitteeNames> = {
+        [MenuItems.KulalaSudharakaSangha]:
+          CommitteeNames.KULALA_SUDHARAKA_SANGHA,
+        [MenuItems.Sevadala]: CommitteeNames.SEVADALA,
+        [MenuItems.MahilaMadali]: CommitteeNames.MAHILA_MANDALI,
+      };
+      const committee = committeeMap[item.name];
+      if (committee) {
+        dispatch(setActiveCommitteePage(committee));
+      }
+    }
     navigation.handleNavigation(item.path);
   };
 

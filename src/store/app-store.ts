@@ -1,11 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import uiControlsReducers from "./slices/ui-controls.ts";
-import dataReducer from "./slices/data-slice.ts";
+import committeeReducer from "./slices/committee-slice.ts";
+import mahilaMandaliReducer from "./slices/mahila-mandali-slice.ts";
+import sevadalaReducer from "./slices/sevadala-slice.ts";
 
 const appStore = configureStore({
   reducer: {
     uiControls: uiControlsReducers,
-    data: dataReducer,
+    committee: committeeReducer,
+    mahilaMandali: mahilaMandaliReducer,
+    sevadala: sevadalaReducer,
   },
 });
 

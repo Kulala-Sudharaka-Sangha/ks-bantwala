@@ -1,5 +1,5 @@
-import { Outlet } from "react-router-dom";
 import "./App.scss";
+import { Outlet } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import MasterMenu from "./components/menu/MasterMenu";
 import Header from "./components/header/Header";

@@ -9,6 +9,12 @@ enum RoutesList {
   PAST_COMMITTEE_MEMBERS = "/past-committee-members",
 }
 
+export enum CommitteeNames {
+  KULALA_SUDHARAKA_SANGHA = "kulal-sudharaka-sangha",
+  SEVADALA = "sevadala",
+  MAHILA_MANDALI = "mahila-mandali",
+}
+
 interface SubMenuItem {
   id: number | string;
   name: string;
@@ -125,4 +131,4 @@ const Menu = [
 ];
 
 export { Menu, RoutesList };
-export type { MenuCategories, MenuItems, MenuCategory, MenuItem };
+export { MenuCategories, MenuItems, MenuCategory, MenuItem };

@@ -73,7 +73,9 @@ async function importLifetime() {
   const batch = db.batch();
 
   for (const member of lifetime) {
-    const memberRef = db.collection("life-time-members").doc(member.voterID);
+    const memberRef = db
+      .collection("life-time-members")
+      .doc(member.membershipNumber);
     batch.set(memberRef, member);
   }
 

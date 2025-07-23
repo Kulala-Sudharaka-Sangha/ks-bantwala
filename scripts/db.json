@@ -6,8 +6,8 @@
     "membersList": [
       {
         "id": "member-1",
-        "name": "Sansa P Kulal",
-        "role": "Role One",
+        "name": "Ramesh Saliyan",
+        "role": "President",
         "image": "https://loremflickr.com/160/160/person?lock=0",
         "bloodGroup": "A+",
         "address": "Bantwala, Karnataka",
@@ -15,8 +15,8 @@
       },
       {
         "id": "member-2",
-        "name": "Arya Kulal",
-        "role": "Role Two",
+        "name": "Yadava Agrabailu",
+        "role": "Secretary",
         "image": "https://loremflickr.com/160/160/person?lock=2",
         "bloodGroup": "B+",
         "address": "Mangalore, Karnataka",
@@ -31,8 +31,8 @@
     "membersList": [
       {
         "id": "member-1",
-        "name": "Sansa Kulal",
-        "role": "Role One",
+        "name": "Jayanth Agrabilu",
+        "role": "Dhalapathi",
         "image": "https://loremflickr.com/160/160/person?lock=0",
         "bloodGroup": "A+",
         "address": "Bantwala, Karnataka",
@@ -40,8 +40,8 @@
       },
       {
         "id": "member-2",
-        "name": "Arya Kulal",
-        "role": "Role Two",
+        "name": "Rajesh Kula Bhandaribettu",
+        "role": "Secretary",
         "image": "https://loremflickr.com/160/160/person?lock=2",
         "bloodGroup": "B+",
         "address": "Mangalore, Karnataka",
@@ -51,13 +51,13 @@
   },
   "mahila-mandali-members-info": {
     "id": "mahila-mandali-members",
-    "teamName": "Kulala Sevadala Bantwala 2025-26 members",
+    "teamName": "Kulala Mahila Mandali Bantwala 2025-26 members",
     "aboutTeam": "The Kulala Sudharaka Sangha (R.) Bantwala is a community organization dedicated to the welfare and development of the Kulala community in Bantwala. Our mission is to promote cultural heritage, support members in need, and foster unity among the community.",
     "membersList": [
       {
         "id": "member-1",
-        "name": "Sansa Kulal",
-        "role": "Role One",
+        "name": "Asha Giridhar",
+        "role": "President",
         "image": "https://loremflickr.com/160/160/person?lock=0",
         "bloodGroup": "A+",
         "address": "Bantwala, Karnataka",
@@ -65,8 +65,8 @@
       },
       {
         "id": "member-2",
-        "name": "Arya Kulal",
-        "role": "Role Two",
+        "name": "Jayanthi Kulal",
+        "role": "Secretary",
         "image": "https://loremflickr.com/160/160/person?lock=2",
         "bloodGroup": "B+",
         "address": "Mangalore, Karnataka",
