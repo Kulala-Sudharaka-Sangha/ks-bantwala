@@ -9,6 +9,7 @@ import { AppDispatch, RootState } from "../../store/app-store";
 import { fetchMahilaMandaliMembers } from "../../store/slices/mahila-mandali-slice";
 import { fetchSevadalaMembers } from "../../store/slices/sevadala-slice";
 import { CommitteeNames } from "../../utils/master-menu";
+import Loading from "../../components/loading/Loading";
 
 const CommitteeMembers = () => {
   const [committeeInfo, setCommitteeInfo] = useState<CommitteeMembers>({
@@ -63,7 +64,7 @@ const CommitteeMembers = () => {
     }
   }, [committees, sevadalaMembers, mahilaMandali, activeCommitteePage]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>Error: {error}</p>;
 
   return (
@@ -96,9 +97,16 @@ const CommitteeMembers = () => {
                 loading="lazy"
                 style={{ background: "#eee" }}
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = "";
+                  (e.target as HTMLImageElement).src =
+                    "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><circle cx='80' cy='50' r='30' fill='%23ccc'/><path d='M40,130 C40,100 120,100 120,130 Z' fill='%23ccc'/></svg>";
                 }}
               />
+              {/* <img
+                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><circle cx='80' cy='50' r='30' fill='%23ccc'/><path d='M40,130 C40,100 120,100 120,130 Z' fill='%23ccc'/></svg>"
+                alt={member.name}
+                className="member-image"
+                style={{ background: "#eee" }}
+              /> */}
             </div>
             <div className="member-info">
               <div className="member-name">{member.name}</div>

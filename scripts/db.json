@@ -8,7 +8,7 @@
         "id": "member-1",
         "name": "Ramesh Saliyan",
         "role": "President",
-        "image": "https://loremflickr.com/160/160/person?lock=0",
+        "image": "https://picsum.photos/160/160?random=2",
         "bloodGroup": "A+",
         "address": "Bantwala, Karnataka",
         "phNumber": "9876543210"
@@ -17,7 +17,7 @@
         "id": "member-2",
         "name": "Yadava Agrabailu",
         "role": "Secretary",
-        "image": "https://loremflickr.com/160/160/person?lock=2",
+        "image": "https://picsum.photos/160/160?random=2",
         "bloodGroup": "B+",
         "address": "Mangalore, Karnataka",
         "phNumber": "9876543211"
@@ -33,7 +33,7 @@
         "id": "member-1",
         "name": "Jayanth Agrabilu",
         "role": "Dhalapathi",
-        "image": "https://loremflickr.com/160/160/person?lock=0",
+        "image": "https://picsum.photos/160/160?random=2",
         "bloodGroup": "A+",
         "address": "Bantwala, Karnataka",
         "phNumber": "9876543210"
@@ -42,7 +42,7 @@
         "id": "member-2",
         "name": "Rajesh Kula Bhandaribettu",
         "role": "Secretary",
-        "image": "https://loremflickr.com/160/160/person?lock=2",
+        "image": "https://picsum.photos/160/160?random=2",
         "bloodGroup": "B+",
         "address": "Mangalore, Karnataka",
         "phNumber": "9876543211"
@@ -58,7 +58,7 @@
         "id": "member-1",
         "name": "Asha Giridhar",
         "role": "President",
-        "image": "https://loremflickr.com/160/160/person?lock=0",
+        "image": "https://picsum.photos/160/160?random=2",
         "bloodGroup": "A+",
         "address": "Bantwala, Karnataka",
         "phNumber": "9876543210"
@@ -67,7 +67,7 @@
         "id": "member-2",
         "name": "Jayanthi Kulal",
         "role": "Secretary",
-        "image": "https://loremflickr.com/160/160/person?lock=2",
+        "image": "https://picsum.photos/160/160?random=2",
         "bloodGroup": "B+",
         "address": "Mangalore, Karnataka",
         "phNumber": "9876543211"
@@ -85,7 +85,7 @@
         "address": "Bantwala, Karnataka, India, 574211, Near Bantwala Bus Stand, Opposite City Mall, 2nd Floor, Room No. 204, Landmark: Next to State Bank ATM, Pincode: 574211, District: Dakshina Kannada, State: Karnataka, Country: India",
         "phNumber": "9876543210",
         "bloodGroup": "A+",
-        "image": "https://loremflickr.com/160/160/person?lock=0"
+        "image": "https://picsum.photos/160/160?random=2"
       },
       {
         "id": 2,
@@ -95,7 +95,7 @@
         "address": "Bantwala, Karnataka, India, 574211, Near Market",
         "phNumber": "8765432109",
         "bloodGroup": "B+",
-        "image": "https://loremflickr.com/160/160/person?lock=1"
+        "image": "https://picsum.photos/160/160?random=2"
       }
     ]
   },
