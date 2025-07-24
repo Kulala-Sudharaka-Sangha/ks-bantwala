@@ -60,7 +60,13 @@ const CommitteeMembers = () => {
 
     const selectedData = dataMap[activeCommitteePage];
     if (selectedData && selectedData.length > 0) {
-      setCommitteeInfo(selectedData[0]);
+      const sortedMembers = [...selectedData[0].members].sort((a, b) => {
+        const numA = parseInt(a.id.replace(/\D/g, ""), 10);
+        const numB = parseInt(b.id.replace(/\D/g, ""), 10);
+        return numA - numB;
+      });
+      console.log("Sorted Members:", sortedMembers);
+      setCommitteeInfo({ ...selectedData[0], members: sortedMembers });
     }
   }, [committees, sevadalaMembers, mahilaMandali, activeCommitteePage]);
 
@@ -82,11 +88,11 @@ const CommitteeMembers = () => {
             <div
               className={`member-image-container ${
                 index === 0
-                  ? "red-border"
+                  ? "green-border"
                   : index === 1
                   ? "orange-border"
                   : index === 2
-                  ? "green-border"
+                  ? "red-border"
                   : ""
               }`}
             >

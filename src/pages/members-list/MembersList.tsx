@@ -83,7 +83,7 @@ const membersInfo = [
     address: "Bantwala, Karnataka, India, 574211, South Street",
     phNumber: "3210987654",
     bloodGroup: "O-",
-    image: "https://loremflickr.com/160/160/person?lock=6",
+    image: "https://picsum.photos/160/160?random=2",
   },
   {
     id: 8,
@@ -93,7 +93,7 @@ const membersInfo = [
     address: "Bantwala, Karnataka, India, 574211, North Street",
     phNumber: "2109876543",
     bloodGroup: "AB-",
-    image: "https://loremflickr.com/160/160/person?lock=7",
+    image: "https://picsum.photos/160/160?random=2",
   },
   {
     id: 9,
@@ -103,7 +103,7 @@ const membersInfo = [
     address: "Bantwala, Karnataka, India, 574211, East End",
     phNumber: "1098765432",
     bloodGroup: "A+",
-    image: "https://loremflickr.com/160/160/person?lock=8",
+    image: "https://picsum.photos/160/160?random=8",
   },
   {
     id: 10,
@@ -123,7 +123,7 @@ const membersInfo = [
     address: "Bantwala, Karnataka, India, 574211, Lake View",
     phNumber: "2876543210",
     bloodGroup: "O+",
-    image: "https://loremflickr.com/160/160/person?lock=10",
+    image: "https://picsum.photos/160/160?random=10",
   },
   {
     id: 12,

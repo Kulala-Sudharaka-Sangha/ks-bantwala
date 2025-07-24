@@ -2,6 +2,7 @@
 
 .all-members-list {
   padding: 2rem;
+  // padding-top: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -13,6 +14,14 @@
     margin-bottom: var.$spacing-medium;
     display: flex;
     width: 100%;
+
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    position: sticky;
+    top: 3rem;
+    width: 100%;
+    background: var.$white;
+    z-index: 984;
 
     .title {
       flex: 1;
@@ -110,24 +119,38 @@
 
 @media (max-width: 768px) {
   .all-members-list {
-    padding: 1rem;
+    padding: 0rem;
 
     .page-title {
       .search-box-container {
         display: none;
       }
+      padding: 1rem;
+      padding-top: 2rem;
     }
     .page-description {
       width: 100%;
       text-align: center;
       text-align: left;
       font-size: 1rem;
+      padding: 0 1rem;
     }
     .search-box-container-mobile {
+      padding: 0 1rem;
       display: block;
       margin: 1.2rem 0;
+      padding-bottom: 0.8rem;
+      position: sticky;
+      top: 8rem;
+      background: white;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      width: 100%;
     }
     .members-list-container {
+      padding: 0 1rem;
+      padding-bottom: 1rem;
+
       .member-list-card {
         height: fit-content;
         flex-direction: column;

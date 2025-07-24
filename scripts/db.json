@@ -35,7 +35,7 @@
         "role": "Dhalapathi",
         "image": "https://picsum.photos/160/160?random=2",
         "bloodGroup": "A+",
-        "address": "Bantwala, Karnataka",
+        "address": "Agrabailu, Bantwala",
         "phNumber": "9876543210"
       },
       {
@@ -44,7 +44,107 @@
         "role": "Secretary",
         "image": "https://picsum.photos/160/160?random=2",
         "bloodGroup": "B+",
-        "address": "Mangalore, Karnataka",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+
+      {
+        "id": "member-3",
+        "name": "Chandrashekar Kulal Kamaje",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-4",
+        "name": "Tharanatha Kulal Kamaje",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-5",
+        "name": "Raghavendra Kulal",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-6",
+        "name": "Rajesh Rai",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-7",
+        "name": "Yadava Kulal Agrabailu",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-8",
+        "name": "Ganesh Kulal Duganakodi",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-9",
+        "name": "Ganesh Kulal Bedragudde",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-10",
+        "name": "Devadas Kulal Agrabailu",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-11",
+        "name": "Premnath Bantwala",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-12",
+        "name": "Dharshan Kulal Modankapu",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-13",
+        "name": "Chirag Kulal Kamaje",
+        "role": "member",
+        "image": "https://picsum.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
         "phNumber": "9876543211"
       }
     ]
