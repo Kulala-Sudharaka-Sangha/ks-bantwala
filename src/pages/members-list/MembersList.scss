@@ -21,7 +21,7 @@
     top: 3rem;
     width: 100%;
     background: var.$white;
-    z-index: 984;
+    z-index: 999;
 
     .title {
       flex: 1;
@@ -136,14 +136,14 @@
       padding: 0 1rem;
     }
     .search-box-container-mobile {
-      padding: 0 1rem;
+      padding: 0.5rem 1rem;
       display: block;
       margin: 1.2rem 0;
       padding-bottom: 0.8rem;
       position: sticky;
-      top: 8rem;
-      background: white;
-      z-index: 1000;
+      top: 7.8rem;
+      background: var.$white;
+      z-index: 999;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       width: 100%;
     }
