@@ -11,7 +11,6 @@ const NotFound = ({ message }: NotFoundProps) => {
   return (
     <div className="not-found">
       <div className="animation-container">
-        {" "}
         <Lottie animationData={animationData} loop={true} />
       </div>
       <div className="message">

@@ -1,0 +1,60 @@
+@use "../../styles/variables.scss" as *;
+
+.social-section {
+  background: $primary-color;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+
+  .section-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    text-align: left;
+  }
+
+  .social-activities-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .social-activity-card {
+      // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      background: $primary-color;
+      border: 1.5px solid $border-color;
+
+      .activity-image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .activity-lottie {
+          width: 10rem;
+        }
+      }
+
+      .activity-details {
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

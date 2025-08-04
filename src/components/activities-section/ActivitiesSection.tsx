@@ -18,7 +18,7 @@ export const ActivitiesSection = () => {
 
   return (
     <div className="activities-section">
-      <div className="section-header">Activities List</div>
+      <div className="section-header">Chaitanya Activities List</div>
       <div className="activities-list-container">
         <div
           className="carousel-track"

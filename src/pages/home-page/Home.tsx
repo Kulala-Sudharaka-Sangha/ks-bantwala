@@ -3,6 +3,8 @@ import BrandLogo from "../../assets/kulal-logo.png";
 import useNavigation from "../../hooks/useNavigation";
 import { RoutesList } from "../../utils/master-menu";
 import { ActivitiesSection } from "../../components/activities-section/ActivitiesSection";
+import { EventsSection } from "../../components/events-section/EventsSection";
+import { SocialActivities } from "../../components/social-activities-section/SocialActivities";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -34,6 +36,8 @@ const Home = () => {
         </div>
       </div>
       <ActivitiesSection />
+      <SocialActivities />
+      <EventsSection />
     </div>
   );
 };
