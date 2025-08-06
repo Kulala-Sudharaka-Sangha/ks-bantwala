@@ -1,4 +1,8 @@
+@use "../../styles/variables" as var;
+
 .activities-section {
+  background: #f7f7f7;
+
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -14,53 +18,78 @@
     text-align: left;
   }
 
+  .section-description {
+    font-size: 1.2rem;
+    color: var.$text-color;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 2rem;
+  }
+
   .activities-list-container {
     width: 100%;
-    max-width: 89rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    overflow-x: scroll;
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-    scrollbar-width: none;
-    padding: 1rem 0;
+    padding: 1rem 8rem;
+    flex-wrap: wrap;
+    gap: 5rem;
 
-    .carousel-track {
-      display: flex;
-      width: 100%;
-      gap: 1.2rem;
-      transition: transform 0.5s;
-
-      .carousel-page {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        gap: 2.1rem; // Adjusted gap for better spacing
-      }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 4rem;
+      padding: unset;
     }
   }
-  .carousel-dots {
-    bottom: 18px;
-    left: 50%;
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-    padding: 1rem 0;
+}
 
-    .dot {
-      width: 12px;
-      height: 12px;
+.teachers-list-container {
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .teacher-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    .teacher-image {
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
-      background: #ccc;
+      margin-bottom: 1rem;
       cursor: pointer;
-      transition: background 0.3s;
-      &.active {
-        background: #ff9800;
+
+      filter: grayscale(100%);
+      cursor: pointer;
+
+      &:hover {
+        filter: grayscale(0%);
       }
+    }
+
+    .teacher-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var.$text-color;
+      margin-bottom: 0.5rem;
+    }
+
+    .teacher-role {
+      font-size: 1rem;
+      color: var.$gray;
+      padding: unset;
     }
   }
 }

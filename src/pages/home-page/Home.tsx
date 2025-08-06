@@ -35,9 +35,9 @@ const Home = () => {
           </button>
         </div>
       </div>
+      <EventsSection />
       <ActivitiesSection />
       <SocialActivities />
-      <EventsSection />
     </div>
   );
 };
