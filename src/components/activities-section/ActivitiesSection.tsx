@@ -18,7 +18,10 @@ export const ActivitiesSection = () => {
 
   return (
     <div className="activities-section">
-      <div className="section-header">Chaitanya Activities List</div>
+      <div className="section-header">
+        <span className="highlight">Chaitanya Program </span> – Nurturing Talent
+        Through Free Activities
+      </div>
       <div className="activities-list-container">
         <div
           className="carousel-track"

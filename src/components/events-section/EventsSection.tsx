@@ -18,7 +18,10 @@ export const EventsSection = () => {
 
   return (
     <div className="events-section">
-      <div className="section-header">Upcoming Events</div>
+      <div className="section-header">
+        Get Ready for Our Upcoming{" "}
+        <span className="highlight">Events & Activities</span>
+      </div>
       <div className="events-poster-container">
         <img src={EventsPosterList[idx]} alt="" />
       </div>
