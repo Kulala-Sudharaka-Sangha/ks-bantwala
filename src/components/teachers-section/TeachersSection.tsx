@@ -1,4 +1,3 @@
-import { ActivitiesCard } from "../activities-card/ActivitiesCard";
 import "./TeachersSection.scss";
 
 export const TeachersSection = () => {

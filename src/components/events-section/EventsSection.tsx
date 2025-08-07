@@ -15,7 +15,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 const EventsPosterList = [lakshmiEvent, krishnaEvent, danceEvent];
 
 export const EventsSection = () => {
-  const [idx, setIdx] = useState(2);
+  const [idx, _setIdx] = useState(2);
   const [showModal, setShowModal] = useState(false);
 
   return (
