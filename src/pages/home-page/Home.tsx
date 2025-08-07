@@ -6,6 +6,8 @@ import { ActivitiesSection } from "../../components/activities-section/Activitie
 import { EventsSection } from "../../components/events-section/EventsSection";
 import { SocialActivities } from "../../components/social-activities-section/SocialActivities";
 import { TeachersSection } from "../../components/teachers-section/TeachersSection";
+import { AddSection } from "../../components/adds-section/AddSection";
+import { DonationSection } from "../../components/donation-section/DonationSection";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -40,6 +42,8 @@ const Home = () => {
       <ActivitiesSection />
       <TeachersSection />
       <SocialActivities />
+      <AddSection />
+      <DonationSection />
     </div>
   );
 };
