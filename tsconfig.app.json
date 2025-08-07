@@ -23,9 +23,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"],
-  "compilerOptions": {
-    "erasableSyntaxOnly": false,
-    "verbatimModuleSyntax": false
-  },
+  "include": ["src"]
 }

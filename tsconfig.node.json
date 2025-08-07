@@ -21,9 +21,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["vite.config.ts"],
-  "compilerOptions": {
-    "erasableSyntaxOnly": false,
-    "verbatimModuleSyntax": false
-  },
+  "include": ["vite.config.ts"]
 }
