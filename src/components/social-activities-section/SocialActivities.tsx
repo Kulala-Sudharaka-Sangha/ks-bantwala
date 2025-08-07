@@ -22,7 +22,7 @@ export const SocialActivities = () => {
         <div className="social-activity-card">
           <div className="activity-image">
             <Lottie
-              animationData={bloodDonar}
+              animationData={education}
               loop={true}
               className="activity-lottie"
             />
@@ -43,7 +43,7 @@ export const SocialActivities = () => {
         <div className="social-activity-card">
           <div className="activity-image">
             <Lottie
-              animationData={education}
+              animationData={bloodDonar}
               loop={true}
               className="activity-lottie"
             />

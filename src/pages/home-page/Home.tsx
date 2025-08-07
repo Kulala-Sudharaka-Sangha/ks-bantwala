@@ -5,6 +5,7 @@ import { RoutesList } from "../../utils/master-menu";
 import { ActivitiesSection } from "../../components/activities-section/ActivitiesSection";
 import { EventsSection } from "../../components/events-section/EventsSection";
 import { SocialActivities } from "../../components/social-activities-section/SocialActivities";
+import { TeachersSection } from "../../components/teachers-section/TeachersSection";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -37,6 +38,7 @@ const Home = () => {
       </div>
       <EventsSection />
       <ActivitiesSection />
+      <TeachersSection />
       <SocialActivities />
     </div>
   );
