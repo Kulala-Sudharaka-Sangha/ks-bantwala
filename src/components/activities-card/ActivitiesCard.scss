@@ -59,6 +59,12 @@
     text-align: center;
 
     .header-image {
+      width: 100%;
+      display: none;
+    }
+
+    .header-image-small {
+      display: block !important;
       img {
         width: 100%;
         height: auto;
