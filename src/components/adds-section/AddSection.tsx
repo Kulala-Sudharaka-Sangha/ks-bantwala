@@ -6,14 +6,30 @@ export const AddSection = () => {
       <div className="section-header">
         In Appreciation of Our <span className="highlight">Supporters</span>
       </div>
-      <div className="section-description">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
-        itaque laudantium architecto aperiam quos molestias aliquam soluta eum
-        minus. Quibusdam sint sunt iste libero voluptatum nobis adipisci earum,
-        dolore officiis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Ipsa est nesciunt quo officia quos.
+
+      <div className="supporters-list-container">
+        <div className="add-item">
+          <img
+            src="https://picsum.photos/160/160?random=2"
+            alt="Supporter 1"
+            className="supporter-image"
+          />
+        </div>
+        <div className="add-item">
+          <img
+            src="https://picsum.photos/160/160?random=2"
+            alt="Supporter 1"
+            className="supporter-image"
+          />
+        </div>
+        <div className="add-item">
+          <img
+            src="https://picsum.photos/160/160?random=2"
+            alt="Supporter 2"
+            className="supporter-image"
+          />
+        </div>
       </div>
-      <div className="supporters-list"></div>
     </div>
   );
 };
