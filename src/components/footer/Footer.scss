@@ -1,0 +1,68 @@
+@use "../../styles/variables" as var;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.footer {
+  padding: 1rem;
+  background: var.$primary-color;
+  color: var.$text-color;
+  line-height: 1.8rem;
+
+  .footer-message {
+    font-size: 1rem;
+    font-weight: 600;
+
+    .heart {
+      color: var.$red;
+    }
+
+    .tools {
+      color: var.$color-brown;
+    }
+  }
+
+  .footer-text {
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+
+  .social-follow {
+    margin-top: 1rem;
+    text-align: center;
+
+    .follow-text {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var.$text-color;
+    }
+
+    .social-icons {
+      margin-top: 0.5rem;
+
+      svg {
+        margin: 0 0.5rem;
+        font-size: 1.5rem;
+        color: var.$icon-color;
+        transition: 0.3s ease;
+
+        &:hover {
+          color: var.$orange;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

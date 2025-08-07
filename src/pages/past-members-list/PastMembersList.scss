@@ -1,0 +1,85 @@
+@use "../../styles/variables" as var;
+
+.past-members-list {
+  padding: 2rem;
+
+  .page-title {
+    font-size: var.$font-size-large;
+    font-weight: bold;
+    color: var.$text-color;
+    margin-bottom: var.$spacing-medium;
+    display: flex;
+    width: 100%;
+    flex: 1;
+    text-wrap: nowrap;
+    text-align: left;
+  }
+
+  .page-description {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .members-table {
+    line-break: anywhere;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      cursor: pointer;
+      font-size: 1rem;
+
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        border: 1px solid var.$light-gray;
+        text-align: left;
+      }
+
+      thead th {
+        background-color: var.$orange;
+        font-weight: bold;
+        white-space: nowrap;
+        font-size: 1.1rem;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: rgba(var.$light-orange, 0.1);
+      }
+
+      tr {
+        &:first-child {
+          background-color: #a8f7bc;
+          font-weight: 600;
+        }
+        &:hover {
+          background-color: rgba(var.$light-orange, 0.3) !important;
+        }
+      }
+    }
+
+    .table-year {
+      white-space: nowrap !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .past-members-list {
+    padding: 1rem;
+
+    .members-table {
+      table {
+        font-size: 0.8rem;
+
+        thead th {
+          background-color: var.$orange;
+          font-weight: bold;
+          white-space: nowrap;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
