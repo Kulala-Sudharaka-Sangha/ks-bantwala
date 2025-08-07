@@ -7,12 +7,22 @@ import help from "../../assets/lottie/help.json";
 export const SocialActivities = () => {
   return (
     <div className="social-section">
-      <div className="section-header">Social Activities</div>
+      <div className="section-header">
+        Engaging in Meaningful{" "}
+        <span className="highlight">Social Activities</span>
+      </div>
+      <div className="social-activities-description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
+        itaque laudantium architecto aperiam quos molestias aliquam soluta eum
+        minus. Quibusdam sint sunt iste libero voluptatum nobis adipisci earum,
+        dolore officiis? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Ipsa est nesciunt quo officia quos.
+      </div>
       <div className="social-activities-list">
         <div className="social-activity-card">
           <div className="activity-image">
             <Lottie
-              animationData={bloodDonar}
+              animationData={education}
               loop={true}
               className="activity-lottie"
             />
@@ -33,7 +43,7 @@ export const SocialActivities = () => {
         <div className="social-activity-card">
           <div className="activity-image">
             <Lottie
-              animationData={education}
+              animationData={bloodDonar}
               loop={true}
               className="activity-lottie"
             />
