@@ -1,0 +1,27 @@
+@use "../../styles/variables.scss" as *;
+
+.donation-section {
+  background: #f7f7f7;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+
+  .section-header {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    text-align: left;
+  }
+
+  .section-description {
+    font-size: 1.2rem;
+    color: $text-color;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 2rem;
+  }
+}
