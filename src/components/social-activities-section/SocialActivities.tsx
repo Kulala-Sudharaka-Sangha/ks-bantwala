@@ -12,11 +12,13 @@ export const SocialActivities = () => {
         <span className="highlight">Social Activities</span>
       </div>
       <div className="social-activities-description">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
-        itaque laudantium architecto aperiam quos molestias aliquam soluta eum
-        minus. Quibusdam sint sunt iste libero voluptatum nobis adipisci earum,
-        dolore officiis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Ipsa est nesciunt quo officia quos.
+        We actively participate in initiatives that bring people together and
+        create a positive impact. Our goal is to foster unity, compassion, and a
+        sense of responsibility towards society. Through cultural,
+        environmental, and humanitarian efforts, we aim to make a lasting
+        difference. Every event is a step towards building a stronger, kinder
+        community. Join us in creating moments that inspire change and spread
+        hope.
       </div>
       <div className="social-activities-list">
         <div className="social-activity-card">
@@ -30,13 +32,13 @@ export const SocialActivities = () => {
           <div className="activity-details">
             <h3>Vidhya Nidhi</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa est
-              nesciunt quo officia quos. Illo dolorum voluptate, libero velit
-              fugit magnam provident id fugiat, tempore labore maxime! Tenetur,
-              laboriosam molestias? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Ipsa est nesciunt quo officia quos. Illo dolorum
-              voluptate, libero velit fugit magnam provident id fugiat, tempore
-              labore maxime
+              Education is the most powerful tool for shaping a brighter future.
+              Through Vidhya Nidhi, we extend support to students in need,
+              helping them continue their learning journey. Our aim is to remove
+              financial barriers and open doors to new opportunities. Every
+              contribution is an investment in knowledge, dreams, and the
+              leaders of tomorrow. Together, we can empower minds and transform
+              lives through education.
             </p>
           </div>
         </div>
@@ -51,13 +53,13 @@ export const SocialActivities = () => {
           <div className="activity-details">
             <h3>Donate Blood</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa est
-              nesciunt quo officia quos. Illo dolorum voluptate, libero velit
-              fugit magnam provident id fugiat, tempore labore maxime! Tenetur,
-              laboriosam molestias? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Ipsa est nesciunt quo officia quos. Illo dolorum
-              voluptate, libero velit fugit magnam provident id fugiat, tempore
-              labore maxime
+              A single blood donation can save multiple lives and bring hope to
+              those in critical need. We organize regular blood donation drives
+              to support hospitals and patients. Every drop counts — it’s a gift
+              of life that costs nothing but means everything. By donating
+              blood, you become a lifeline for someone in their toughest moment.
+              Join us in this noble cause and help keep the spirit of humanity
+              alive.
             </p>
           </div>
         </div>
@@ -72,13 +74,12 @@ export const SocialActivities = () => {
           <div className="activity-details">
             <h3>Shrama Dhana</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa est
-              nesciunt quo officia quos. Illo dolorum voluptate, libero velit
-              fugit magnam provident id fugiat, tempore labore maxime! Tenetur,
-              laboriosam molestias? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Ipsa est nesciunt quo officia quos. Illo dolorum
-              voluptate, libero velit fugit magnam provident id fugiat, tempore
-              labore maxime
+              Sharing is the heart of compassion, and Sharma Dhana embodies that
+              spirit. We bring communities together to provide essentials, care,
+              and comfort to those in need. Every act of giving is a step toward
+              reducing hardship and spreading kindness. Through collective
+              effort, we turn generosity into meaningful change. Join us in
+              making giving not just an act, but a way of life.
             </p>
           </div>
         </div>
