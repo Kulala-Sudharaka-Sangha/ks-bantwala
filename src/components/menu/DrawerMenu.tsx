@@ -15,7 +15,7 @@ import {
 } from "../../store/slices/ui-controls";
 import type { RootState } from "../../store/app-store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 const DrawerMenu = () => {

@@ -4,11 +4,12 @@ import { RoutesList } from "../utils/master-menu";
 import Home from "../pages/home-page/Home";
 import MembershipRegistration from "../pages/membership-registration/MembershipRegistration";
 import CommitteeMembers from "../pages/committee-members/CommitteeMembers";
-import { Gallery } from "../pages/gallery/Gallery";
+import Gallery from "../pages/gallery/Gallery";
 import ContactPage from "../pages/contact-page/ContactPage";
 import MembersList from "../pages/members-list/MembersList";
 import NotFound from "../pages/not-found/NotFound";
 import PastMembersList from "../pages/past-members-list/PastMembersList";
+import NewsFeeds from "../pages/news/NewsFeeds";
 
 const appRouter = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const appRouter = createBrowserRouter([
       {
         path: RoutesList.PAST_COMMITTEE_MEMBERS,
         element: <PastMembersList />,
+      },
+      {
+        path: RoutesList.NEWS,
+        element: <NewsFeeds />,
       },
     ],
   },

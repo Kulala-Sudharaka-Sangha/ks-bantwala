@@ -1,6 +1,6 @@
 import "./Gallery.scss";
 
-export const Gallery = () => {
+const Gallery = () => {
   const galleryData = {
     title: "Gallery",
     description: "Explore our collection of images and videos.",
@@ -29,3 +29,5 @@ export const Gallery = () => {
     </div>
   );
 };
+
+export default Gallery;
