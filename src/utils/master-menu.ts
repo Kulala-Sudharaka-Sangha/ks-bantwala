@@ -7,6 +7,7 @@ enum RoutesList {
   CONTACT_US = "/contact-us",
   MEMBERS_LIST = "/members-list",
   PAST_COMMITTEE_MEMBERS = "/past-committee-members",
+  NEWS = "/news",
 }
 
 export enum CommitteeNames {
@@ -39,10 +40,11 @@ interface MenuCategory {
 
 enum MenuCategories {
   Home = "Home",
-  CommitteeMembers = "Committee Members",
+  CommitteeMembers = "Committee",
   MemberRegistration = "Member Registration",
   // AboutUs = "About Us",
   ContactUs = "Contact Us",
+  News = "News",
   Gallery = "Gallery",
   MembersList = "Members List",
 }
@@ -60,6 +62,18 @@ const Menu = [
     category: MenuCategories.Home,
     hasSubCategory: false,
     items: [{ id: "home", name: MenuCategories.Home, path: RoutesList.HOME }],
+  },
+  {
+    id: 6,
+    category: MenuCategories.News,
+    hasSubCategory: false,
+    items: [
+      {
+        id: "news",
+        name: "News",
+        path: RoutesList.NEWS,
+      },
+    ],
   },
   {
     id: 1,

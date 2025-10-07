@@ -20,8 +20,11 @@ import {
 } from "../../store/slices/ui-controls";
 import BrandLogo from "../../assets/kulal-logo.png";
 import SiteHeader from "../../assets/site-header.png";
+import { useTranslation } from "react-i18next";
 
 const MasterMenu = () => {
+  const { i18n } = useTranslation();
+
   const dispatch = useDispatch();
   const isDrawerMenuOpen =
     useSelector<RootState>((state) => state.uiControls.isDrawerMenuOpen) ??
@@ -70,13 +73,6 @@ const MasterMenu = () => {
         </div>
         <div className="brand-name">
           <img src={SiteHeader} alt="brand-logo" className="site-header-img" />
-        </div>
-        <div className="language-selector">
-          {/* <FontAwesomeIcon
-            icon={faLanguage}
-            className="menu-icon"
-            onClick={() => {}}
-          /> */}
         </div>
         {isDrawerMenuOpen && <DrawerMenu />}
       </div>
@@ -153,8 +149,10 @@ const MasterMenu = () => {
         <div className="menu-category language-selector">
           <FontAwesomeIcon
             icon={faLanguage}
-            className="menu-icon"
-            onClick={() => {}}
+            className={i18n.language === "en" ? "menu-icon" : "menu-icon kn"}
+            onClick={() =>
+              i18n.changeLanguage(i18n.language === "en" ? "kn" : "en")
+            }
           />
         </div>
       </div>

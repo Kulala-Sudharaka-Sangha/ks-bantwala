@@ -14,8 +14,13 @@ import {
   toggleDrawerMenu,
 } from "../../store/slices/ui-controls";
 import type { RootState } from "../../store/app-store";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe, faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const DrawerMenu = () => {
+  const { i18n } = useTranslation();
+
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const activeRouterPage =
@@ -87,6 +92,18 @@ const DrawerMenu = () => {
           )}
         </div>
       ))}
+      <div
+        className="language-switcher"
+        onClick={() =>
+          i18n.changeLanguage(i18n.language === "en" ? "kn" : "en")
+        }
+      >
+        <FontAwesomeIcon
+          icon={faLanguage}
+          className={i18n.language === "en" ? "menu-icon" : "menu-icon kn"}
+        />
+        &nbsp;&nbsp;{i18n.language === "en" ? "ಕನ್ನಡ" : "English"}
+      </div>
     </div>
   );
 };

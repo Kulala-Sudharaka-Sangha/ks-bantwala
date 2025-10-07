@@ -1,7 +1,7 @@
 @use "../../styles/variables" as var;
 
 .activity-card {
-  max-width: 40rem;
+  max-width: 34rem;
   // height: 20rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
@@ -15,7 +15,7 @@
   .header-image {
     img {
       border-radius: 12px;
-      width: 18rem;
+      width: 15rem;
       height: 100%;
     }
   }

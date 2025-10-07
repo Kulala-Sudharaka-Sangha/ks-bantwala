@@ -5,6 +5,7 @@ import appStore from "./store/app-store.ts";
 import { Provider } from "react-redux";
 import { RouterProvider } from "react-router-dom";
 import appRouter from "./routes/main-route.tsx";
+import "./i18n";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
