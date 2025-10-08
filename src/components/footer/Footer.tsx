@@ -33,12 +33,12 @@ const Footer = () => {
       <div className="footer-message">
         Made with <FontAwesomeIcon icon={faHeart} className="heart" /> and{" "}
         <FontAwesomeIcon icon={faTools} className="tools" />
-        &nbsp;&nbsp;by Kulala sevadala
+        &nbsp;&nbsp;by Hare Krishna Dev Works
       </div>
 
       <div className="footer-text">
-        All Rights Reserved <FontAwesomeIcon icon={faCopyright} /> Kulala
-        sevadala
+        All Rights Reserved <FontAwesomeIcon icon={faCopyright} /> Hare Krishna
+        Dev Works
       </div>
 
       <div className="social-follow">

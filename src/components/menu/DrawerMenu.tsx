@@ -41,6 +41,7 @@ const DrawerMenu = () => {
           CommitteeNames.KULALA_SUDHARAKA_SANGHA,
         [MenuItems.Sevadala]: CommitteeNames.SEVADALA,
         [MenuItems.MahilaMadali]: CommitteeNames.MAHILA_MANDALI,
+        [MenuItems.ZoneCommitteeMembers]: CommitteeNames.ZONE_COMMITTEE_MEMBERS,
       };
       const committee = committeeMap[item.name];
       if (committee) {

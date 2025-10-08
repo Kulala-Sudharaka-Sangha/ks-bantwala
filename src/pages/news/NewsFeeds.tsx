@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./NewsFeeds.scss";
+import Marquee from "react-fast-marquee";
 
 interface NewsItem {
   id: number;
@@ -67,6 +68,12 @@ const NewsFeeds: React.FC = () => {
 
   return (
     <div className="news-feed">
+      <div className="marquee">
+        <Marquee gradient={false} speed={60}>
+          🚀 Welcome to my website! 🚀 | 💻 Built with React | 🎨 CSS
+          animations!
+        </Marquee>
+      </div>
       <div className="content-area">
         <div className="main-news">
           {mainNews ? (

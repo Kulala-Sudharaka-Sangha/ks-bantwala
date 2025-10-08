@@ -10,6 +10,7 @@ import { fetchMahilaMandaliMembers } from "../../store/slices/mahila-mandali-sli
 import { fetchSevadalaMembers } from "../../store/slices/sevadala-slice";
 import { CommitteeNames } from "../../utils/master-menu";
 import Loading from "../../components/loading/Loading";
+import { fetchZoneCommitteeMembers } from "../../store/slices/zone-committee-members-slice";
 
 const CommitteeMembers = () => {
   const [committeeInfo, setCommitteeInfo] = useState<CommitteeMembers>({
@@ -25,6 +26,9 @@ const CommitteeMembers = () => {
   );
   const { committees } = useSelector((state: RootState) => state.committee);
   const { sevadalaMembers } = useSelector((state: RootState) => state.sevadala);
+  const { zoneCommitteeMembers } = useSelector(
+    (state: RootState) => state.zoneCommitteeMembers
+  );
   const { mahilaMandali } = useSelector(
     (state: RootState) => state.mahilaMandali
   );
@@ -48,6 +52,8 @@ const CommitteeMembers = () => {
       dispatch(fetchSevadalaMembers());
     } else if (activeCommitteePage === CommitteeNames.MAHILA_MANDALI) {
       dispatch(fetchMahilaMandaliMembers());
+    } else if (activeCommitteePage === CommitteeNames.ZONE_COMMITTEE_MEMBERS) {
+      dispatch(fetchZoneCommitteeMembers());
     }
   }, [dispatch, activeCommitteePage]);
 
@@ -56,6 +62,7 @@ const CommitteeMembers = () => {
       [CommitteeNames.KULALA_SUDHARAKA_SANGHA]: committees,
       [CommitteeNames.SEVADALA]: sevadalaMembers,
       [CommitteeNames.MAHILA_MANDALI]: mahilaMandali,
+      [CommitteeNames.ZONE_COMMITTEE_MEMBERS]: zoneCommitteeMembers,
     };
 
     const selectedData = dataMap[activeCommitteePage];
@@ -68,7 +75,13 @@ const CommitteeMembers = () => {
       console.log("Sorted Members:", sortedMembers);
       setCommitteeInfo({ ...selectedData[0], members: sortedMembers });
     }
-  }, [committees, sevadalaMembers, mahilaMandali, activeCommitteePage]);
+  }, [
+    committees,
+    sevadalaMembers,
+    mahilaMandali,
+    activeCommitteePage,
+    zoneCommitteeMembers,
+  ]);
 
   if (loading) return <Loading />;
   if (error) return <p>Error: {error}</p>;

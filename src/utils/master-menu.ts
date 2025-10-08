@@ -15,6 +15,7 @@ export enum CommitteeNames {
   KULALA_SUDHARAKA_SANGHA = "kulal-sudharaka-sangha",
   SEVADALA = "sevadala",
   MAHILA_MANDALI = "mahila-mandali",
+  ZONE_COMMITTEE_MEMBERS = "zone-committee-members",
 }
 
 interface SubMenuItem {
@@ -55,6 +56,7 @@ enum MenuItems {
   Sevadala = "Sevadala",
   MahilaMadali = "Mahila Mandali",
   PastMembersList = "Past Committee Members List",
+  ZoneCommitteeMembers = "Zone Committee Members",
 }
 
 const Menu = [
@@ -91,6 +93,11 @@ const Menu = [
         id: 13,
         path: RoutesList.COMMITTEE_MEMBERS,
         name: MenuItems.MahilaMadali,
+      },
+      {
+        id: 15,
+        path: RoutesList.COMMITTEE_MEMBERS,
+        name: MenuItems.ZoneCommitteeMembers,
       },
       {
         id: 14,

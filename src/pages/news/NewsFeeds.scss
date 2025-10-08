@@ -191,6 +191,16 @@
     }
   }
 
+  .marquee {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    box-sizing: border-box;
+  }
+
   @media (max-width: 992px) {
     .content-area {
       flex-direction: column;
