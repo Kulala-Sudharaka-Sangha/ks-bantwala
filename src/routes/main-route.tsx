@@ -10,6 +10,7 @@ import MembersList from "../pages/members-list/MembersList";
 import NotFound from "../pages/not-found/NotFound";
 import PastMembersList from "../pages/past-members-list/PastMembersList";
 import NewsFeeds from "../pages/news/NewsFeeds";
+import NewsEditor from "../pages/news/NewsEditor";
 
 const appRouter = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const appRouter = createBrowserRouter([
       {
         path: RoutesList.NEWS,
         element: <NewsFeeds />,
+      },
+      {
+        path: RoutesList.NEWS_EDITOR,
+        element: <NewsEditor />,
       },
     ],
   },

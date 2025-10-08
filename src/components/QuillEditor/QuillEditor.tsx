@@ -20,12 +20,7 @@ const QuillEditor: React.FC<QuillEditorProps> = ({ value, onChange }) => {
           toolbar: [
             [{ font: [] }],
             [{ header: [1, 2, 3, 4, 5, 6, false] }],
-            [
-              "bold",
-              "italic",
-              "underline",
-              // "strike"
-            ],
+            ["bold", "italic", "underline"],
             [{ color: [] }, { background: [] }],
             [{ align: [] }],
             [
@@ -34,12 +29,8 @@ const QuillEditor: React.FC<QuillEditorProps> = ({ value, onChange }) => {
               { indent: "-1" },
               { indent: "+1" },
             ],
-            [
-              "blockquote",
-              //  "code-block"
-            ],
+            ["blockquote"],
             ["link", "image"],
-            // ["clean"],
           ],
         },
       });
