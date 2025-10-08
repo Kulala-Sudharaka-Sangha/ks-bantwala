@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./NewsFeeds.scss";
+import "./NewsEditor.scss";
 import "quill/dist/quill.snow.css";
 import QuillEditor from "../../components/QuillEditor/QuillEditor";
 
@@ -12,7 +12,13 @@ const NewsEditor = () => {
       {!showPreview ? (
         <div key="editor" className="news-editor">
           <h1>News Editor</h1>
-          <QuillEditor value={content} onChange={setContent} />
+          <QuillEditor
+            value={content}
+            onChange={() => {
+              setContent(content);
+              console.log(content);
+            }}
+          />
           <button
             className="btn"
             onClick={() => setShowPreview((prev) => !prev)}
