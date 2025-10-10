@@ -75,7 +75,7 @@ const InputBox = (props: InputBoxProps) => {
       >
         <select
           className="input-field dropdown-select"
-          id="customDropdown"
+          id={id}
           value={selectedValue}
           onChange={(e) => setSelectedValue(e.target.value)}
         >
