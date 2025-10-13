@@ -3,24 +3,13 @@ import "./NewsEditor.scss";
 import "quill/dist/quill.snow.css";
 import QuillEditor from "../../components/QuillEditor/QuillEditor";
 import InputBox, { InputTypes } from "../../components/input-box/InputBox";
-
-const categories = [
-  "ದೇಶ", // Nation
-  "ರಾಜಕೀಯ", // Politics
-  "ಆರೋಗ್ಯ", // Health
-  "ಶಿಕ್ಷಣ", // Education
-  "ಮನರಂಜನೆ", // Entertainment
-  "ಕ್ರೀಡೆ", // Sports
-  "ಸಂಸ್ಕೃತಿ", // Culture
-  "ವಿಜ್ಞಾನ", // Science
-  "ಧರ್ಮ", // Religion
-];
+import { newsCategories } from "../../utils/news";
 
 const NewsEditor = () => {
   const [content, setContent] = useState("");
   const [showPreview, setShowPreview] = useState(false);
   const [title, setTitle] = useState("");
-  const [category, setCategory] = useState(categories[0]);
+  const [category, setCategory] = useState(newsCategories[0]);
 
   return (
     <>
@@ -41,7 +30,7 @@ const NewsEditor = () => {
             name="news-category"
             type={InputTypes.DropDown}
             label="News Category"
-            options={categories.map((cat) => ({ id: cat, title: cat }))}
+            options={newsCategories.map((cat) => ({ id: cat, title: cat }))}
             value={category}
             isRequired
             setInputValue={(value) => setCategory(value)}

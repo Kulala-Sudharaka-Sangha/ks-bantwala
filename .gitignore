@@ -27,3 +27,4 @@ dist-ssr
 
 # secret files
 serviceAccountKey.json
+/poc
