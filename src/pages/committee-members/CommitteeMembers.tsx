@@ -109,7 +109,7 @@ const CommitteeMembers = () => {
                   : ""
               }`}
             >
-              <img
+              {/* <img
                 src={member.image}
                 alt={member.name}
                 className="member-image"
@@ -119,13 +119,13 @@ const CommitteeMembers = () => {
                   (e.target as HTMLImageElement).src =
                     "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><circle cx='80' cy='50' r='30' fill='%23ccc'/><path d='M40,130 C40,100 120,100 120,130 Z' fill='%23ccc'/></svg>";
                 }}
-              />
-              {/* <img
-                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><circle cx='80' cy='50' r='30' fill='%23ccc'/><path d='M40,130 C40,100 120,100 120,130 Z' fill='%23ccc'/></svg>"
+              /> */}
+              <img
+                src={member.image}
                 alt={member.name}
                 className="member-image"
                 style={{ background: "#eee" }}
-              /> */}
+              />
             </div>
             <div className="member-info">
               <div className="member-name">{member.name}</div>
