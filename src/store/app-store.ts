@@ -4,6 +4,7 @@ import committeeReducer from "./slices/committee-slice.ts";
 import mahilaMandaliReducer from "./slices/mahila-mandali-slice.ts";
 import sevadalaReducer from "./slices/sevadala-slice.ts";
 import zoneCommitteeMembersReducer from "./slices/zone-committee-members-slice.ts";
+import newsSliceReducer from "./slices/news-slice.ts";
 
 const appStore = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ const appStore = configureStore({
     mahilaMandali: mahilaMandaliReducer,
     sevadala: sevadalaReducer,
     zoneCommitteeMembers: zoneCommitteeMembersReducer,
+    news: newsSliceReducer,
   },
 });
 
