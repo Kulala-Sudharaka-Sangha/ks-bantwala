@@ -11,23 +11,25 @@ import {
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
+import { useTranslation } from "react-i18next";
 
 const EventsPosterList = [lakshmiEvent, krishnaEvent, danceEvent];
 
 export const EventsSection = () => {
   const [idx, _setIdx] = useState(2);
   const [showModal, setShowModal] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="events-section">
       <div className="section-header">
-        Get Ready for Our Upcoming
-        <span className="highlight"> Events & Celebrations</span>
+        {t("home.eventSection.header")}
+        <span className="highlight">
+          {t("home.eventSection.headerHighlight")}
+        </span>
       </div>
       <div className="section-description">
-        Join us for a series of exciting events and celebrations that bring our
-        community together. From cultural festivals to spiritual gatherings, we
-        have something for everyone. Stay tuned for more details!
+        {t("home.eventSection.description")}
       </div>
       <div className="section-content">
         {/* <div className="scroll-controller left-scroll">

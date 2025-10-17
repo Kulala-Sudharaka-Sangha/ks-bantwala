@@ -1,4 +1,12 @@
 {
   "activitiesHeader": "Chaitanya Program – Nurturing Talent Through Free Activities",
-  "activitiesDescription": "Chaitanya Program is a free initiative by KS Bantwala to nurture talent in our community. We organize various activities to help individuals develop their skills and showcase their talents."
+  "activitiesDescription": "Chaitanya Program is a free initiative by KS Bantwala to nurture talent in our community. We organize various activities to help individuals develop their skills and showcase their talents.",
+
+  "home": {
+    "eventSection": {
+      "header": "Get Ready for Our Upcoming",
+      "headerHighlight": " Events & Celebrations",
+      "description": "Join us for a series of exciting events and celebrations that bring our community together. From cultural festivals to spiritual gatherings, we have something for everyone. Stay tuned for more details!"
+    }
+  }
 }
