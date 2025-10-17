@@ -125,6 +125,10 @@ const CommitteeMembers = () => {
                 alt={member.name}
                 className="member-image"
                 style={{ background: "#eee" }}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src =
+                    "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><circle cx='80' cy='50' r='30' fill='%23ccc'/><path d='M40,130 C40,100 120,100 120,130 Z' fill='%23ccc'/></svg>";
+                }}
               />
             </div>
             <div className="member-info">
