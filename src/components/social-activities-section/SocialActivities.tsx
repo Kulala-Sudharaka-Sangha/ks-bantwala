@@ -3,22 +3,18 @@ import Lottie from "lottie-react";
 import bloodDonar from "../../assets/lottie/blood-donar.json";
 import education from "../../assets/lottie/education.json";
 import help from "../../assets/lottie/help.json";
+import { useTranslation } from "react-i18next";
 
 export const SocialActivities = () => {
+  const{ t } = useTranslation();
   return (
     <div className="social-section">
       <div className="section-header">
-        Engaging in Meaningful{" "}
-        <span className="highlight">Social Activities</span>
+        {t("home.socialSection.header")}
+        <span className="highlight">{t("home.socialSection.headerHighlight")}</span>
       </div>
       <div className="social-activities-description">
-        We actively participate in initiatives that bring people together and
-        create a positive impact. Our goal is to foster unity, compassion, and a
-        sense of responsibility towards society. Through cultural,
-        environmental, and humanitarian efforts, we aim to make a lasting
-        difference. Every event is a step towards building a stronger, kinder
-        community. Join us in creating moments that inspire change and spread
-        hope.
+        {t("home.socialSection.description")}
       </div>
       <div className="social-activities-list">
         <div className="social-activity-card">

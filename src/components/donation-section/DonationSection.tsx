@@ -1,18 +1,16 @@
+import { useTranslation } from "react-i18next";
 import "./DonationSection.scss";
 
 export const DonationSection = () => {
+  const { t } = useTranslation();
   return (
     <div className="donation-section">
       <div className="section-header">
-        <span className="highlight">Donate </span>
-        to These Worthy Causes
+       <span className="highlight"> {t("home.donationSection.headerHighlight")}</span>
+       {t("home.donationSection.header")}
       </div>
       <div className="section-description">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
-        itaque laudantium architecto aperiam quos molestias aliquam soluta eum
-        minus. Quibusdam sint sunt iste libero voluptatum nobis adipisci earum,
-        dolore officiis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Ipsa est nesciunt quo officia quos.
+        {t("home.donationSection.description")}
       </div>
       <div className="supporters-list"></div>
     </div>

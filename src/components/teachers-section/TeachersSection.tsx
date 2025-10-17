@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import "./TeachersSection.scss";
 
 export const TeachersSection = () => {
+  const { t } = useTranslation();
   const teachers = [
     {
       name: "Shri Chennakeshava Kulal",
@@ -23,14 +25,14 @@ export const TeachersSection = () => {
   return (
     <div className="teachers-section">
       <div className="section-header">
-        Taught by <span className="highlight">Hearts</span> That Give Freely
+        {t("home.teacherSection.header")}
+        <span className="highlight">
+          {t("home.teacherSection.headerHighlight")}
+        </span>
+        {t("home.teacherSection.header1")}
       </div>
       <div className="section-description">
-        Our dedicated teachers are here to guide you every step of the way. With
-        a wealth of experience and a passion for teaching, they are committed to
-        helping you achieve your goals. Whether you're a beginner or looking to
-        refine your skills, our teachers provide personalized attention and
-        support to ensure your success.
+        {t("home.teacherSection.description")}
       </div>
 
       <div className="teachers-list-container">
