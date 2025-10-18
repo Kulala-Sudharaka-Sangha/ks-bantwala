@@ -1,28 +1,33 @@
 import "./ContactPage.scss";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useTranslation } from "react-i18next";
 
 const ContactPage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="contact-page-wrapper">
       <div className="contact-page">
         <div className="form-section">
-          <h2>Contact With Us</h2>
-          <p>If you have any questions please feel free to contact us.</p>
+          <h2>{t("contact.title")}</h2>
+          <p>{t("contact.subtitle")}</p>
           <form>
             <div className="form-row">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
+              <input type="text" placeholder={t("contact.namePlaceholder")} />
+              <input type="email" placeholder={t("contact.emailPlaceholder")} />
             </div>
             <div className="form-row">
-              <input type="text" placeholder="Phone" />
-              <input type="text" placeholder="Subject" />
+              <input type="text" placeholder={t("contact.phonePlaceholder")} />
+              <input type="text" placeholder={t("contact.subjectPlaceholder")} />
             </div>
-            <textarea placeholder="Your Message" />
-            <button type="submit" className="btn-primary">Send</button>
+            <textarea placeholder={t("contact.messagePlaceholder")} />
+            <button type="submit" className="btn-primary">
+              {t("contact.sendButton")}
+            </button>
             <div className="newsletter">
               <label>
                 <input type="checkbox" />
-                Do you want to subscribe our Newsletter ?
+                {t("contact.newsletterText")}
               </label>
             </div>
           </form>
@@ -42,24 +47,24 @@ const ContactPage = () => {
         <div className="info-card">
           <i className="fas fa-phone-alt"></i>
           <div>
-            <h4>+91 9480675351</h4>
-            <p>kulalasevadalabantwala@gmail.com</p>
+            <h4>{t("contact.phoneNumber")}</h4>
+            <p>{t("contact.email")}</p>
           </div>
         </div>
 
         <div className="info-card">
           <i className="fas fa-map-marker-alt"></i>
           <div>
-            <h4>Kulala Samudaya Bhavana</h4>
-            <p>Posalli, B C Road</p>
+            <h4>{t("contact.addressTitle")}</h4>
+            <p>{t("contact.addressDetails")}</p>
           </div>
         </div>
 
         <div className="info-card">
           <i className="fas fa-clock"></i>
           <div>
-            <h4>Mon – Sun: 8am – 4pm</h4>
-            <p></p>
+            <h4>{t("contact.timingTitle")}</h4>
+            <p>{t("contact.timingDetails")}</p>
           </div>
         </div>
       </div>

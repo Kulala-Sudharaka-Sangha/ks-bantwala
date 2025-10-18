@@ -8,8 +8,10 @@ import { SocialActivities } from "../../components/social-activities-section/Soc
 import { TeachersSection } from "../../components/teachers-section/TeachersSection";
 import { AddSection } from "../../components/adds-section/AddSection";
 import { DonationSection } from "../../components/donation-section/DonationSection";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   const navigation = useNavigation();
 
   return (
@@ -22,7 +24,7 @@ const Home = () => {
           </div>
           <div className="info-title">ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)</div>
           <p className="info-description">
-            Bantwala Taluk Kulala Seva Sangha (R.) is a community organization dedicated to promoting unity, culture, and welfare among the Kulala community. Rooted in Hindu traditions and values, the Sangha serves as a platform to connect members, support education, encourage social harmony, and preserve our rich heritage.
+            {t("home.homeheader.description")}
           </p>
           <button
             type="submit"

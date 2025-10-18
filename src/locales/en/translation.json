@@ -42,5 +42,53 @@
       "header": " To These Worthy Causes",
       "description": "Your contribution can make a real difference in uplifting our community. Every donation—big or small—helps us support educational initiatives, healthcare assistance, cultural preservation, and community welfare programs. By donating, you become a part of our shared mission to empower individuals, preserve our values, and build a stronger, more united future for generations to come. Let’s come together to give back and grow together."
     }
-  }
+  },
+   "registration": {
+    "formTitle": "MEMBER REGISTRATION",
+    "firstName": "First Name",
+    "secondName": "Second Name",
+    "fatherHusbandName": "Father/Husband Name",
+    "phoneNumber": "Phone Number",
+    "emailId": "Email ID (Optional)",
+    "dateOfBirth": "Date of Birth",
+    "years": "Years",
+    "profession": "Profession",
+    "bloodGroup": "Blood Group",
+    "hobbyInterest": "Hobby / Interest",
+    "residentialAddress": "Residential Address",
+    "permanentAddress": "Permanent Address",
+    "uploadPhoto": "Passport Size Photo",
+    "acceptDeclaration": "I accept the",
+    "declarationLink": "Membership Declaration",
+    "createBtn": "CREATE",
+    "declaration": {
+      "title": "Membership Declaration",
+      "point1": "I am above 18 years of age.",
+      "point2": "I belong to the Moolya / Kulala / Handa community.",
+      "point3": "I am currently residing in Bangalore and my native place is in the districts of Dakshina Kannada / Udupi / Kodagu / Kasaragodu or nearby districts.",
+      "point4": "I understand that the membership request is subject to approval by the Executive Committee.",
+      "point5": "I agree to pay the membership fee of INR 500/-, which is a one-time lifetime membership fee.",
+      "point6": "As a member, I will be eligible to vote and participate in the selection of the committee members once every year.",
+      "point7": "The information provided by me is true and correct to the best of my knowledge.",
+      "point8": "I agree to abide by the rules and regulations of the Kulala Sudharaka Sangha (R.) Bantwala.",
+      "closeBtn": "Close"
+    }
+  },
+  "contact": {
+  "title": "Contact With Us",
+  "subtitle": "If you have any questions please feel free to contact us.",
+  "namePlaceholder": "Name",
+  "emailPlaceholder": "Email",
+  "phonePlaceholder": "Phone",
+  "subjectPlaceholder": "Subject",
+  "messagePlaceholder": "Your Message",
+  "sendButton": "Send",
+  "newsletterText": "Do you want to subscribe our Newsletter?",
+  "phoneNumber": "+91 9480675351",
+  "email": "kulalasevadalabantwala@gmail.com",
+  "addressTitle": "Kulala Samudaya Bhavana",
+  "addressDetails": "Posalli, B C Road",
+  "timingTitle": "Mon – Sun: 8am – 4pm",
+  "timingDetails": ""
+}
 }

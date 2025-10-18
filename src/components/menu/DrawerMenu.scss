@@ -2,61 +2,182 @@
 
 .drawer-menu {
   position: fixed;
-  background: rgba(var.$light-gray, 0.98);
-  // height: 100%;
-  width: 100%;
+  top: 48px;
   left: 0;
+  width: 100%;
+  height: calc(100vh - 48px);
+  background: var.$white;
+  color: var.$text-color;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  overflow-y: scroll;
-  padding-bottom: 20rem;
-  animation: slide-in 0.3s forwards;
-  top: 48px;
+  overflow-y: auto;
+  padding-bottom: 5rem;
+  animation: slide-in 0.3s ease forwards;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+
+  // smooth scrolling
+  scroll-behavior: smooth;
 
   &-category {
-    padding: 0 1rem;
-    text-align: left;
-    border-bottom: 1px solid rgba(var.$text-color, 0.2);
     width: 100%;
-    color: var.$text-color;
-    font-weight: bold;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid rgba(var.$text-color, 0.15);
+    text-align: left;
+    transition: background 0.3s ease;
 
     &-title {
-      font-size: 16px;
-      margin: 1rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0.75rem 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var.$text-color;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var.$highlight-color;
+      }
     }
 
     ul {
-      font-size: 14px;
       list-style: none;
-      padding-inline-start: 8px;
+      margin: 0.5rem 0;
+      padding-left: 0.75rem;
 
       li {
         padding: 0.5rem 0;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border-radius: 6px;
+
+        &:hover {
+          background-color: rgba(var.$highlight-color, 0.08);
+          padding-left: 0.75rem;
+          color: var.$highlight-color;
+        }
+
+        .menu-title {
+          font-weight: 500;
+        }
       }
     }
   }
 
   .active {
-    // background-color: var.$secondary-color;
-    border-left: 6px solid var.$text-color;
-    background-color: rgba(218, 211, 211, 0.294);
+    border-left: 4px solid var.$highlight-color;
+    background-color: rgba(var.$highlight-color, 0.06);
   }
 
   .language-switcher {
-    margin-bottom: auto;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var.$highlight-color;
+    border-top: 1px solid rgba(var.$text-color, 0.15);
+    background: rgba(var.$light-gray, 0.2);
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba(var.$light-gray, 0.35);
+    }
+
+    .menu-icon {
+      font-size: 1.2rem;
+      color: var.$icon-color;
+
+      &.kn {
+        color: var.$icon-shine;
+      }
+    }
+  }
+
+  // ===== Scrollbar styling =====
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(var.$highlight-color, 0.3);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(var.$highlight-color, 0.6);
   }
 }
 
+// ============ Animations ============
 @keyframes slide-in {
   from {
     transform: translateX(-100%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// ============ RESPONSIVE DESIGN ============
+@media (max-width: 1024px) {
+  .drawer-menu {
+    font-size: 0.95rem;
+
+    &-category-title {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .drawer-menu {
+    padding-bottom: 4rem;
+
+    &-category-title {
+      font-size: 0.9rem;
+    }
+
+    ul li {
+      font-size: 0.9rem;
+    }
+
+    .language-switcher {
+      font-size: 0.95rem;
+      padding: 0.75rem 1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .drawer-menu {
+    top: 40px;
+    font-size: 0.9rem;
+
+    &-category-title {
+      font-size: 0.85rem;
+    }
+
+    ul li {
+      font-size: 0.85rem;
+      padding: 0.4rem 0;
+    }
+
+    .language-switcher {
+      font-size: 0.9rem;
+      justify-content: center;
+      text-align: center;
+    }
   }
 }

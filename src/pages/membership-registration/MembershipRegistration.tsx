@@ -2,8 +2,11 @@ import "./MembershipRegistration.scss";
 import InputBox, { InputTypes } from "../../components/input-box/InputBox";
 import { useEffect, useState } from "react";
 import CheckBox from "../../components/check-box/ChckBox";
+import { useTranslation } from "react-i18next";
 
 const MembershipRegistration = () => {
+  const { t } = useTranslation();
+
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -65,40 +68,21 @@ const MembershipRegistration = () => {
         <div className="modal-overlay">
           <div className="modal-content">
             <div>
-              <div className="title">Membership Declaration</div>
+              <div className="title">{t("registration.declaration.title")}</div>
               <div className="declaration-info">
                 <ul>
-                  <li>I am above 18 years of age.</li>
-                  <li>I belong to the Moolya / Kulala / Handa community.</li>
-                  <li>
-                    I am currently residing in Bangalore and my native place is
-                    in the districts of Dakshina Kannada / Udupi / Kodagu /
-                    Kasaragodu or nearby districts.
-                  </li>
-                  <li>
-                    I understand that the membership request is subject to
-                    approval by the Executive Committee.
-                  </li>
-                  <li>
-                    I agree to pay the membership fee of INR 500/-, which is a
-                    one-time lifetime membership fee.
-                  </li>
-                  <li>
-                    As a member, I will be eligible to vote and participate in
-                    the selection of the committee members once every year.
-                  </li>
-                  <li>
-                    The information provided by me is true and correct to the
-                    best of my knowledge.
-                  </li>
-                  <li>
-                    I agree to abide by the rules and regulations of the Kulala
-                    Sudharaka Sangha (R.) Bantwala.
-                  </li>
+                  <li>{t("registration.declaration.point1")}</li>
+                  <li>{t("registration.declaration.point2")}</li>
+                  <li>{t("registration.declaration.point3")}</li>
+                  <li>{t("registration.declaration.point4")}</li>
+                  <li>{t("registration.declaration.point5")}</li>
+                  <li>{t("registration.declaration.point6")}</li>
+                  <li>{t("registration.declaration.point7")}</li>
+                  <li>{t("registration.declaration.point8")}</li>
                 </ul>
               </div>
               <button className="btn" onClick={() => setShowModal(false)}>
-                Close
+                {t("registration.declaration.closeBtn")}
               </button>
             </div>
           </div>
@@ -107,14 +91,14 @@ const MembershipRegistration = () => {
       <div className="form-container">
         <form className="form" onSubmit={(e) => e.preventDefault()}>
           <div className="form-title">
-            <p>MEMBER REGISTRATION</p>
+            <p>{t("registration.formTitle")}</p>
           </div>
           <div className="input-row">
             <InputBox
               id="first-name"
               name="first-name"
               type={InputTypes.Text}
-              label="First Name"
+              label={t("registration.firstName")}
               value={firstName}
               isRequired
               setInputValue={(value) => setFirstName(value)}
@@ -123,7 +107,7 @@ const MembershipRegistration = () => {
               id="second-name"
               name="second-name"
               type={InputTypes.Text}
-              label="Second Name"
+              label={t("registration.secondName")}
               value={secondName}
               isRequired
               setInputValue={(value) => setSecondName(value)}
@@ -132,7 +116,7 @@ const MembershipRegistration = () => {
               id="father-husband-name"
               name="father-husband-name"
               type={InputTypes.Text}
-              label="Father/Husband Name"
+              label={t("registration.fatherHusbandName")}
               value={fatherHusbandName}
               isRequired
               setInputValue={(value) => setFatherHusbandName(value)}
@@ -143,7 +127,7 @@ const MembershipRegistration = () => {
               id="phone-number"
               name="phone-number"
               type={InputTypes.Number}
-              label="Phone Number"
+              label={t("registration.phoneNumber")}
               value={phoneNumber}
               isRequired
               setInputValue={(value) => setPhoneNumber(value)}
@@ -152,7 +136,7 @@ const MembershipRegistration = () => {
               id="emailId"
               name="emailId"
               type={InputTypes.Text}
-              label="Email ID (Optional)"
+              label={t("registration.emailId")}
               value={emailId}
               setInputValue={(value) => setEmailId(value)}
             />
@@ -161,12 +145,12 @@ const MembershipRegistration = () => {
                 id="date-of-birth"
                 name="date-of-birth"
                 type={InputTypes.Date}
-                label="Date of Birth"
+                label={t("registration.dateOfBirth")}
                 value={dateOfBirth}
                 isRequired
                 setInputValue={(value) => setDateOfBirth(value)}
               />
-              {dateOfBirth && <div className="age-label">{age} Years</div>}
+              {dateOfBirth && <div className="age-label">{age} {t("registration.years")}</div>}
             </div>
           </div>
           <div className="input-row">
@@ -174,7 +158,7 @@ const MembershipRegistration = () => {
               id="profession"
               name="profession"
               type={InputTypes.Text}
-              label="Profession"
+              label={t("registration.profession")}
               value={profession}
               setInputValue={(value) => setProfession(value)}
             />
@@ -182,7 +166,7 @@ const MembershipRegistration = () => {
               id="blood-group"
               name="blood-group"
               type={InputTypes.DropDown}
-              label="Blood Group"
+              label={t("registration.bloodGroup")}
               options={[
                 { id: "A+", title: "A+" },
                 { id: "A-", title: "A-" },
@@ -203,7 +187,7 @@ const MembershipRegistration = () => {
               id="hobby-interest"
               name="hobby-interest"
               type={InputTypes.Text}
-              label="Hobby/Interest"
+              label={t("registration.hobbyInterest")}
               value={hobbyInterest}
               setInputValue={(value) => setHobbyInterest(value)}
             />
@@ -215,7 +199,7 @@ const MembershipRegistration = () => {
                   name="address"
                   id="address"
                   className="input-field"
-                  placeholder="Residential Address"
+                  placeholder={t("registration.residentialAddress")}
                   value={residentialAddress}
                   onChange={(e) => setResidentialAddress(e.target.value)}
                   required
@@ -229,7 +213,7 @@ const MembershipRegistration = () => {
                   name="address"
                   id="address"
                   className="input-field"
-                  placeholder="Permanent Address"
+                  placeholder={t("registration.permanentAddress")}
                   value={permanentAddress}
                   onChange={(e) => setPermanentAddress(e.target.value)}
                   required
@@ -243,7 +227,7 @@ const MembershipRegistration = () => {
               id="member-photo"
               name="member-photo"
               type={InputTypes.File}
-              label="Passport Size Photo"
+              label={t("registration.uploadPhoto")}
               value={""}
               setInputValue={() => {}}
               handleSelectedFile={handleSelectedFile}
@@ -266,19 +250,18 @@ const MembershipRegistration = () => {
               toggleCheckBox={setIsAcceptDeclaration}
             />
             <span className="checkbox-label">
-              I accept the
-              <strong> Kulala Sudharaka Sangha (R) Bantwala </strong>
-              Membership{" "}
+              {t("registration.acceptDeclaration")}{" "}
+              <strong> Kulala Sudharaka Sangha (R) Bantwala </strong>{" "}
               <span
                 className="declaration-link"
                 onClick={() => setShowModal(true)}
               >
-                Declaration
+                {t("registration.declarationLink")}
               </span>
             </span>
           </div>
           <button type="submit" className="btn">
-            CREATE
+            {t("registration.createBtn")}
           </button>
         </form>
       </div>
