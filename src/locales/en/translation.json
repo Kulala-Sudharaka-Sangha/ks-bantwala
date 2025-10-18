@@ -1,12 +1,46 @@
 {
-  "activitiesHeader": "Chaitanya Program – Nurturing Talent Through Free Activities",
-  "activitiesDescription": "Chaitanya Program is a free initiative by KS Bantwala to nurture talent in our community. We organize various activities to help individuals develop their skills and showcase their talents.",
-
   "home": {
+    "homeheader":{
+      "title": "Hello Kulala friends! ",
+      "titleHighlight": "Welcome",
+      "subtitle": "Bantwala Taluk Kulala Sudharaka Sangha (R.)",
+      "description": "Bantwala Taluk Kulala Seva Sangha (R.) is a community organization dedicated to promoting unity, culture, and welfare among the Kulala community. Rooted in Hindu traditions and values, the Sangha serves as a platform to connect members, support education, encourage social harmony, and preserve our rich heritage."
+    },
+    "activitiesSection": {
+      "header": "Chaitanya Program – Nurturing Talent Through Free Activities",
+      "description": "Chaitanya Program is a free initiative by KS Bantwala to nurture talent in our community. We organize various activities to help individuals develop their skills and showcase their talents."
+    },
     "eventSection": {
       "header": "Get Ready for Our Upcoming",
       "headerHighlight": " Events & Celebrations",
       "description": "Join us for a series of exciting events and celebrations that bring our community together. From cultural festivals to spiritual gatherings, we have something for everyone. Stay tuned for more details!"
+    },
+    "teacherSection":{
+      "header": "Taught by",
+      "headerHighlight": " Hearts ",
+      "header1": "That Give Freely",
+      "description":  " Our dedicated teachers are here to guide you every step of the way. With a wealth of experience and a passion for teaching, they are committed to helping you achieve your goals. Whether you're a beginner or looking to refine your skills, our teachers provide personalized attention and support to ensure your success."
+    },
+    "socialSection":{
+      "header": "Engaging in Meaningful",
+      "headerHighlight": " Social Activities",
+      "description": "We actively participate in initiatives that bring people together and create a positive impact. Our goal is to foster unity, compassion, and a sense of responsibility towards society. Through cultural, environmental, and humanitarian efforts, we aim to make a lasting difference. Every event is a step towards building a stronger, kinder community. Join us in creating moments that inspire change and spread hope.",
+      "card1header": "Vidhya Nidhi",
+      "card1description": " Education is the most powerful tool for shaping a brighter future. Through Vidhya Nidhi, we extend support to students in need, helping them continue their learning journey. Our aim is to remove financial barriers and open doors to new opportunities. Every contribution is an investment in knowledge, dreams, and the leaders of tomorrow. Together, we can empower minds and transform lives through education.",
+      "card2header": "Donate Blood",
+      "card2description": "A single blood donation can save multiple lives and bring hope to those in critical need. We organize regular blood donation drives to support hospitals and patients. Every drop counts — it’s a gift of life that costs nothing but means everything. By donating blood, you become a lifeline for someone in their toughest moment. Join us in this noble cause and help keep the spirit of humanity alive.",
+      "card3header": "Shrama Dhana",
+      "card3description": " Sharing is the heart of compassion, and Sharma Dhana embodies that spirit. We bring communities together to provide essentials, care, and comfort to those in need. Every act of giving is a step toward reducing hardship and spreading kindness. Through collective effort, we turn generosity into meaningful change. Join us in making giving not just an act, but a way of life."
+    },
+    "addSection":{
+      "header": " In Appreciation of Our",
+      "headerHighlight": " Supporters",
+      "description": "We extend our heartfelt gratitude to all our supporters whose generosity and commitment make our initiatives possible. Your contributions help us create a positive impact in the community and empower individuals to reach their full potential. Together, we are building a brighter future."
+    },
+    "donationSection":{
+      "headerHighlight": "Donate",
+      "header": " To These Worthy Causes",
+      "description": "Your contribution can make a real difference in uplifting our community. Every donation—big or small—helps us support educational initiatives, healthcare assistance, cultural preservation, and community welfare programs. By donating, you become a part of our shared mission to empower individuals, preserve our values, and build a stronger, more united future for generations to come. Let’s come together to give back and grow together."
     }
   }
 }

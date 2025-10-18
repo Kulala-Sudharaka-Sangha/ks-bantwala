@@ -7,8 +7,8 @@ export const ActivitiesSection = () => {
 
   return (
     <div className="activities-section">
-      <div className="section-header">{t("activitiesHeader")}</div>
-      <div className="section-description">{t("activitiesDescription")}</div>
+      <div className="section-header">{t("home.activitiesSection.header")}</div>
+      <div className="section-description">{t("home.activitiesSection.description")}</div>
       <div className="activities-list-container">
         <ActivitiesCard />
         <ActivitiesCard />

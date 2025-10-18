@@ -22,10 +22,7 @@ const Home = () => {
           </div>
           <div className="info-title">ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)</div>
           <p className="info-description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-            itaque fugiat dolore quasi minus consequatur illum dolorum delectus
-            iste corrupti impedit aspernatur, porro blanditiis dolores, ab
-            molestias omnis accusantium ratione?
+            Bantwala Taluk Kulala Seva Sangha (R.) is a community organization dedicated to promoting unity, culture, and welfare among the Kulala community. Rooted in Hindu traditions and values, the Sangha serves as a platform to connect members, support education, encourage social harmony, and preserve our rich heritage.
           </p>
           <button
             type="submit"
