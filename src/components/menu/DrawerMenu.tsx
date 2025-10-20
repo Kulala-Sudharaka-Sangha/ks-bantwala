@@ -93,6 +93,7 @@ const DrawerMenu = () => {
           )}
         </div>
       ))}
+
       <div
         className="language-switcher"
         onClick={() =>
