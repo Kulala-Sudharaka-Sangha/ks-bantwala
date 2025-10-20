@@ -43,11 +43,11 @@ export const fetchZoneCommitteeMembers = createAsyncThunk<
     if (getState().zoneCommitteeMembers.cached)
       return getState().zoneCommitteeMembers.zoneCommitteeMembers;
     try {
-      const sevadalaMembersSnapshot = await getDocs(
-        collection(db, "sevadala-members-info")
+      const zoneMembersSnapshot = await getDocs(
+        collection(db, "zone-members-info")
       );
       const zoneCommitteeMembers: ZoneCommitteeMembers[] = await Promise.all(
-        sevadalaMembersSnapshot.docs.map(async (docSnap) => {
+        zoneMembersSnapshot.docs.map(async (docSnap) => {
           const data = docSnap.data();
           const membersSnapshot = await getDocs(
             collection(docSnap.ref, "members")

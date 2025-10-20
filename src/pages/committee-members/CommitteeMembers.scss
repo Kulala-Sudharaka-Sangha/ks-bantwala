@@ -103,6 +103,19 @@
   }
 }
 
+.lottie-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  .coming-soon-lottie {
+    width: 20rem;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 950px) {
   .members-list {
     flex-direction: column;

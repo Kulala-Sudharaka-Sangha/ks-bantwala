@@ -11,6 +11,8 @@ import { fetchSevadalaMembers } from "../../store/slices/sevadala-slice";
 import { CommitteeNames } from "../../utils/master-menu";
 import Loading from "../../components/loading/Loading";
 import { fetchZoneCommitteeMembers } from "../../store/slices/zone-committee-members-slice";
+import Lottie from "lottie-react";
+import comingSoon from "../../assets/lottie/coming-soon.json";
 
 const CommitteeMembers = () => {
   const [committeeInfo, setCommitteeInfo] = useState<CommitteeMembers>({
@@ -85,6 +87,16 @@ const CommitteeMembers = () => {
 
   if (loading) return <Loading />;
   if (error) return <p>Error: {error}</p>;
+  if (activeCommitteePage === CommitteeNames.ZONE_COMMITTEE_MEMBERS)
+    return (
+      <div className="lottie-container">
+        <Lottie
+          animationData={comingSoon}
+          loop={true}
+          className="coming-soon-lottie"
+        />
+      </div>
+    );
 
   return (
     <div className="members-list">
