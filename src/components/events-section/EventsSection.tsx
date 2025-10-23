@@ -2,22 +2,43 @@ import "./EventsSection.scss";
 import krishnaEvent from "../../assets/krishna.jpeg";
 import lakshmiEvent from "../../assets/lakshmi.jpeg";
 import danceEvent from "../../assets/dance.jpeg";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCalendarDays,
-  faClockFour,
-  faExpand,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
-import { useTranslation } from "react-i18next";
+import prathibhe from "../../assets/prathibhe.jpeg";
 
-const EventsPosterList = [lakshmiEvent, krishnaEvent, danceEvent];
+import { useTranslation } from "react-i18next";
+import EventCard from "../event-card/EventCard";
+
+const EventsList = [
+  {
+    image: prathibhe,
+    date: "26 Oct 2025",
+    time: "09:00 AM - 06:00 PM",
+    location: "Bantwala, Karnataka",
+    title: "ಪ್ರತಿಭಾ ಪುರಸ್ಕಾರ, ವಿದ್ಯಾರ್ಥಿ ವೇತನ ವಿತರಣೆ.",
+  },
+  {
+    image: danceEvent,
+    date: "24 Aug 2025",
+    time: "01:00 PM - 06:00 PM",
+    location: "Bantwala, Karnataka",
+    title: "Cultural Dance Evening",
+  },
+  {
+    image: krishnaEvent,
+    date: "24 Aug 2025",
+    time: "08:00 AM - 06:00 PM",
+    location: "Bantwala, Karnataka",
+    title: "Krishna Janmashtami",
+  },
+  {
+    image: lakshmiEvent,
+    date: "08 Aug 2025",
+    time: "04:00 PM - 08:00 PM",
+    location: "Bantwala, Karnataka",
+    title: "Lakshmi Festival",
+  },
+];
 
 export const EventsSection = () => {
-  const [idx, _setIdx] = useState(2);
-  const [showModal, setShowModal] = useState(false);
   const { t } = useTranslation();
 
   return (
@@ -38,240 +59,9 @@ export const EventsSection = () => {
           </button>
         </div> */}
         <div className="events-cards-container">
-          <div className="event-card">
-            <div className="img-wrapper">
-              <img src={EventsPosterList[idx]} alt="" />
-            </div>
-            <div className="date-sticker">
-              <div className="date">011</div>
-              <div className="month">JAN</div>
-            </div>
-            <div className="enlarge-icon" onClick={() => setShowModal(true)}>
-              <FontAwesomeIcon icon={faExpand} className="enlarge-icon" />
-            </div>
-            <div className="event-card-content">
-              <div className="event-title">Event Title</div>
-              <div className="event-date">
-                <span className="location-icon">
-                  <FontAwesomeIcon
-                    icon={faCalendarDays}
-                    className="card-icon"
-                  />
-                </span>
-                <span className="date-text">12 Jan 2025</span>
-              </div>
-              <div className="event-time">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faClockFour} className="card-icon" />
-                </span>
-                <span className="time-text">10:00 AM - 5:00 PM</span>
-              </div>
-              <div className="event-location">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faLocationDot} className="card-icon" />
-                </span>
-                <span className="location-text">Bantwala, Karnataka</span>
-              </div>
-            </div>
-          </div>
-          <div className="event-card">
-            <div className="img-wrapper">
-              <img src={EventsPosterList[idx]} alt="" />
-            </div>
-            <div className="date-sticker">
-              <div className="date">012</div>
-              <div className="month">JAN</div>
-            </div>
-            <div className="event-card-content">
-              <div className="event-title">Event Title</div>
-              <div className="event-date">
-                <span className="location-icon">
-                  <FontAwesomeIcon
-                    icon={faCalendarDays}
-                    className="card-icon"
-                  />
-                </span>
-                <span className="date-text">12 Jan 2025</span>
-              </div>
-              <div className="event-time">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faClockFour} className="card-icon" />
-                </span>
-                <span className="time-text">10:00 AM - 5:00 PM</span>
-              </div>
-              <div className="event-location">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faLocationDot} className="card-icon" />
-                </span>
-                <span className="location-text">Bantwala, Karnataka</span>
-              </div>
-            </div>
-          </div>
-          <div className="event-card">
-            <div className="img-wrapper">
-              <img src={EventsPosterList[idx]} alt="" />
-            </div>
-            <div className="date-sticker">
-              <div className="date">01</div>
-              <div className="month">JAN</div>
-            </div>
-            <div className="event-card-content">
-              <div className="event-title">Event Title</div>
-              <div className="event-date">
-                <span className="location-icon">
-                  <FontAwesomeIcon
-                    icon={faCalendarDays}
-                    className="card-icon"
-                  />
-                </span>
-                <span className="date-text">12 Jan 2025</span>
-              </div>
-              <div className="event-time">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faClockFour} className="card-icon" />
-                </span>
-                <span className="time-text">10:00 AM - 5:00 PM</span>
-              </div>
-              <div className="event-location">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faLocationDot} className="card-icon" />
-                </span>
-                <span className="location-text">Bantwala, Karnataka</span>
-              </div>
-            </div>
-          </div>
-          <div className="event-card">
-            <div className="img-wrapper">
-              <img src={EventsPosterList[idx]} alt="" />
-            </div>
-            <div className="date-sticker">
-              <div className="date">01</div>
-              <div className="month">JAN</div>
-            </div>
-            <div className="event-card-content">
-              <div className="event-title">Event Title</div>
-              <div className="event-date">
-                <span className="location-icon">
-                  <FontAwesomeIcon
-                    icon={faCalendarDays}
-                    className="card-icon"
-                  />
-                </span>
-                <span className="date-text">12 Jan 2025</span>
-              </div>
-              <div className="event-time">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faClockFour} className="card-icon" />
-                </span>
-                <span className="time-text">10:00 AM - 5:00 PM</span>
-              </div>
-              <div className="event-location">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faLocationDot} className="card-icon" />
-                </span>
-                <span className="location-text">Bantwala, Karnataka</span>
-              </div>
-            </div>
-          </div>
-          <div className="event-card">
-            <div className="img-wrapper">
-              <img src={EventsPosterList[idx]} alt="" />
-            </div>
-            <div className="date-sticker">
-              <div className="date">01</div>
-              <div className="month">JAN</div>
-            </div>
-            <div className="event-card-content">
-              <div className="event-title">Event Title</div>
-              <div className="event-date">
-                <span className="location-icon">
-                  <FontAwesomeIcon
-                    icon={faCalendarDays}
-                    className="card-icon"
-                  />
-                </span>
-                <span className="date-text">12 Jan 2025</span>
-              </div>
-              <div className="event-time">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faClockFour} className="card-icon" />
-                </span>
-                <span className="time-text">10:00 AM - 5:00 PM</span>
-              </div>
-              <div className="event-location">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faLocationDot} className="card-icon" />
-                </span>
-                <span className="location-text">Bantwala, Karnataka</span>
-              </div>
-            </div>
-          </div>
-          <div className="event-card">
-            <div className="img-wrapper">
-              <img src={EventsPosterList[idx]} alt="" />
-            </div>
-            <div className="date-sticker">
-              <div className="date">01</div>
-              <div className="month">JAN</div>
-            </div>
-            <div className="event-card-content">
-              <div className="event-title">Event Title</div>
-              <div className="event-date">
-                <span className="location-icon">
-                  <FontAwesomeIcon
-                    icon={faCalendarDays}
-                    className="card-icon"
-                  />
-                </span>
-                <span className="date-text">12 Jan 2025</span>
-              </div>
-              <div className="event-time">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faClockFour} className="card-icon" />
-                </span>
-                <span className="time-text">10:00 AM - 5:00 PM</span>
-              </div>
-              <div className="event-location">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faLocationDot} className="card-icon" />
-                </span>
-                <span className="location-text">Bantwala, Karnataka</span>
-              </div>
-            </div>
-          </div>
-          <div className="event-card">
-            <div className="img-wrapper">
-              <img src={EventsPosterList[idx]} alt="" />
-            </div>
-            <div className="date-sticker">
-              <div className="date">019</div>
-              <div className="month">JAN</div>
-            </div>
-            <div className="event-card-content">
-              <div className="event-title">Event Title</div>
-              <div className="event-date">
-                <span className="location-icon">
-                  <FontAwesomeIcon
-                    icon={faCalendarDays}
-                    className="card-icon"
-                  />
-                </span>
-                <span className="date-text">12 Jan 2025</span>
-              </div>
-              <div className="event-time">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faClockFour} className="card-icon" />
-                </span>
-                <span className="time-text">10:00 AM - 5:00 PM</span>
-              </div>
-              <div className="event-location">
-                <span className="location-icon">
-                  <FontAwesomeIcon icon={faLocationDot} className="card-icon" />
-                </span>
-                <span className="location-text">Bantwala, Karnataka</span>
-              </div>
-            </div>
-          </div>
+          {EventsList.map((event, index) => (
+            <EventCard key={index} event={event} />
+          ))}
         </div>
         {/* <div className="scroll-controller right-scroll">
           <button>
@@ -279,18 +69,6 @@ export const EventsSection = () => {
           </button>
         </div> */}
       </div>
-      {showModal && (
-        <div className="invitation-modal">
-          <div className="modal-content">
-            <div className="invitation-image">
-              <img src={EventsPosterList[2]} alt="Invitation" />
-            </div>
-            <div className="close-icon" onClick={() => setShowModal(false)}>
-              <FontAwesomeIcon icon={faTimes} className="close-icon" />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

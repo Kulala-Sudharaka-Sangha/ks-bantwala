@@ -262,11 +262,11 @@ const MembersList = () => {
       </div>
       <div className="page-description">
         <p>
-          <FontAwesomeIcon icon={faCircleInfo} className="highlight" /> Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat.
+          <FontAwesomeIcon icon={faCircleInfo} className="highlight" /> We are
+          thrilled to welcome all members who registered as Lifetime Members!
+          Your continued support strengthens our community and ensures lasting
+          benefits, exclusive updates, and lifelong access to our events and
+          resources. Thank you for joining us!
         </p>
       </div>
       <div className="search-box-container-mobile">

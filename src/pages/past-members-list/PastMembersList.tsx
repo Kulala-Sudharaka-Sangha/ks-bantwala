@@ -333,11 +333,11 @@ const PastMembersList = () => {
       <div className="page-title">Past Committee Members List</div>
       <div className="page-description">
         <p>
-          <FontAwesomeIcon icon={faCircleInfo} className="highlight" /> Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat.
+          <FontAwesomeIcon icon={faCircleInfo} className="highlight" />
+          &nbsp; Here is the list of past committee members who have contributed
+          to the growth and success of our organization. Their dedication and
+          service have laid the foundation for our continued progress. We honor
+          and appreciate their efforts in shaping our community.
         </p>
       </div>
       <div className="members-table">
