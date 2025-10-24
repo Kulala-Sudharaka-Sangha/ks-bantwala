@@ -1,0 +1,152 @@
+@use "../../styles/variables" as var;
+
+.payment-page {
+  padding: 2rem;
+
+  &-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .blink-text {
+    color: var.$red;
+    font-weight: bold;
+    animation: blinker 2.5s linear infinite;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .payment-page-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .qr-code {
+      padding-right: 2rem;
+
+      @media (max-width: 768px) {
+        padding-right: unset;
+      }
+
+      .payment-card-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+
+      .qr-image {
+        width: 200px;
+        height: 200px;
+      }
+
+      .payment-info {
+        .upi-code {
+          font-size: 0.875rem;
+          font-weight: bold;
+        }
+
+        .copy-icon {
+          margin-left: 0.5rem;
+          cursor: pointer;
+          color: var.$light-gray;
+
+          &:hover {
+            color: darken(var.$light-gray, 10%);
+          }
+        }
+      }
+    }
+
+    .form-card {
+      border-left: 2px solid var.$primary-color;
+      padding-left: 2rem;
+
+      @media (max-width: 768px) {
+        border-left: unset;
+        padding-left: unset;
+      }
+
+      &-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .image-preview {
+          margin-top: 1rem;
+          max-width: 100px;
+          max-height: 100px;
+          object-fit: contain;
+        }
+
+        .btn {
+          margin-top: 1rem;
+          padding: 0.7rem 1rem;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 1.1rem;
+          margin-top: auto;
+        }
+
+        .form-status {
+          margin-top: 1rem;
+          font-size: 0.8rem;
+          color: var.$red;
+          background: var.$primary-color;
+          padding: 0.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0.2rem;
+          cursor: pointer;
+
+          .error-icon {
+            padding-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .success-message {
+    color: var.$color-whatsapp-green;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      color: var.$text-color;
+    }
+
+    .btn {
+      width: 200px;
+      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

@@ -6,12 +6,14 @@ import help from "../../assets/lottie/help.json";
 import { useTranslation } from "react-i18next";
 
 export const SocialActivities = () => {
-  const{ t } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="social-section">
       <div className="section-header">
         {t("home.socialSection.header")}
-        <span className="highlight">{t("home.socialSection.headerHighlight")}</span>
+        <span className="highlight">
+          {t("home.socialSection.headerHighlight")}
+        </span>
       </div>
       <div className="social-activities-description">
         {t("home.socialSection.description")}

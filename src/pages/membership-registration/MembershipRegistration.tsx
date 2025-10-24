@@ -3,6 +3,25 @@ import InputBox, { InputTypes } from "../../components/input-box/InputBox";
 import { useEffect, useState } from "react";
 import CheckBox from "../../components/check-box/ChckBox";
 import { useTranslation } from "react-i18next";
+import useNavigation from "../../hooks/useNavigation";
+import { RoutesList } from "../../utils/master-menu";
+import { PaymentCause } from "../../utils/payment";
+
+interface UserInformation {
+  firstName: string;
+  secondName: string;
+  fatherHusbandName: string;
+  phoneNumber: string;
+  emailId: string;
+  dateOfBirth: string;
+  age: string;
+  profession: string;
+  bloodGroup: string;
+  hobbyInterest: string;
+  residentialAddress: string;
+  permanentAddress: string;
+  memberPhoto: any;
+}
 
 const MembershipRegistration = () => {
   const { t } = useTranslation();
@@ -25,6 +44,8 @@ const MembershipRegistration = () => {
   const [_memberPhoto, setMemberPhoto] = useState<File | null>(null);
   const [showModal, setShowModal] = useState(false);
 
+  const navigation = useNavigation();
+
   useEffect(() => {
     if (dateOfBirth) {
       const birthDate = new Date(dateOfBirth);
@@ -45,13 +66,46 @@ const MembershipRegistration = () => {
     }
   }, [dateOfBirth]);
 
-  function handleSelectedFile(e: React.ChangeEvent<HTMLInputElement>) {
+  const generateUserInformation = async () => {
+    const userInfo: UserInformation = {
+      firstName,
+      secondName,
+      fatherHusbandName,
+      phoneNumber,
+      emailId,
+      dateOfBirth,
+      age,
+      profession,
+      bloodGroup,
+      hobbyInterest,
+      residentialAddress,
+      permanentAddress,
+      memberPhoto: null,
+    };
+
+    const fileToBase64 = (file: File) =>
+      new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result as string);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+
+    if (_memberPhoto) {
+      userInfo.memberPhoto = await fileToBase64(_memberPhoto);
+    }
+
+    localStorage.setItem("userInformation", JSON.stringify(userInfo));
+    localStorage.setItem("paymentCause", PaymentCause.Membership);
+    navigation.handleNavigation(RoutesList.PAYMENT);
+  };
+
+  const handleSelectedFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
     if (!selectedFile) return;
 
     const reader = new FileReader();
-
-    reader.onload = function (event) {
+    reader.onload = (event) => {
       if (event.target?.result) {
         setPreviewImgSrc(event.target.result as string);
       }
@@ -60,7 +114,7 @@ const MembershipRegistration = () => {
     setFileName(selectedFile.name);
     setMemberPhoto(selectedFile);
     reader.readAsDataURL(selectedFile);
-  }
+  };
 
   return (
     <div className="membership-registration">
@@ -150,7 +204,11 @@ const MembershipRegistration = () => {
                 isRequired
                 setInputValue={(value) => setDateOfBirth(value)}
               />
-              {dateOfBirth && <div className="age-label">{age} {t("registration.years")}</div>}
+              {dateOfBirth && (
+                <div className="age-label">
+                  {age} {t("registration.years")}
+                </div>
+              )}
             </div>
           </div>
           <div className="input-row">
@@ -260,7 +318,14 @@ const MembershipRegistration = () => {
               </span>
             </span>
           </div>
-          <button type="submit" className="btn">
+          <button
+            type="submit"
+            className={["btn", !isAcceptDeclaration ? "disabled" : ""].join(
+              " "
+            )}
+            disabled={!isAcceptDeclaration}
+            onClick={generateUserInformation}
+          >
             {t("registration.createBtn")}
           </button>
         </form>

@@ -11,6 +11,7 @@ import NotFound from "../pages/not-found/NotFound";
 import PastMembersList from "../pages/past-members-list/PastMembersList";
 import NewsFeeds from "../pages/news/NewsFeeds";
 import NewsEditor from "../pages/news/NewsEditor";
+import PaymentPage from "../pages/payment-page/PaymentPage";
 
 const appRouter = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const appRouter = createBrowserRouter([
       {
         path: RoutesList.NEWS_EDITOR,
         element: <NewsEditor />,
+      },
+      {
+        path: RoutesList.PAYMENT,
+        element: <PaymentPage />,
       },
     ],
   },

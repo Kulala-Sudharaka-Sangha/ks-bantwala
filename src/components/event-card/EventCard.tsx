@@ -7,6 +7,7 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import "./EventCard.scss";
 
 interface EventCardProps {
   image: any;

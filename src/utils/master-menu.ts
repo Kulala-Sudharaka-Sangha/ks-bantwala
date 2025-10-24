@@ -9,6 +9,7 @@ enum RoutesList {
   PAST_COMMITTEE_MEMBERS = "/past-committee-members",
   NEWS = "/news",
   NEWS_EDITOR = "/news-editor",
+  PAYMENT = "/payment",
 }
 
 export enum CommitteeNames {

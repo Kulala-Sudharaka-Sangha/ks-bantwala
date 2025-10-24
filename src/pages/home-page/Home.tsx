@@ -23,9 +23,7 @@ const Home = () => {
             ನಮಸ್ತೇ ಕುಲಾಲ ಬಂಧುಗಳೆ! <span className="highlight">ಸ್ವಾಗತ</span>
           </div>
           <div className="info-title">ಬಂಟ್ವಾಳ ತಾಲೂಕು ಕುಲಾಲ ಸುಧಾರಕ ಸಂಘ(ರಿ.)</div>
-          <p className="info-description">
-            {t("home.homeheader.description")}
-          </p>
+          <p className="info-description">{t("home.homeheader.description")}</p>
           <button
             type="submit"
             className="btn"
