@@ -1,32 +1,36 @@
 import { useTranslation } from "react-i18next";
 import { ActivitiesCard } from "../activities-card/ActivitiesCard";
 import "./ActivitiesSection.scss";
+import Bhajan from "../../assets/activities-images/bhajan.png";
+import Dance from "../../assets/activities-images/dance.png";
+import Drawing from "../../assets/activities-images/drawing.png";
+import Yakshagana from "../../assets/activities-images/yakshagana.png";
 
 const ActivitiesList = [
   {
     title: "The Chaitanya Dance Group",
     tagLine: "Awakening the Spirit Through Dance",
     description: "Join us for an evening of captivating performances.",
-    imageUrl: "https://picsum.photos/160/160?random=2",
+    imageUrl: Dance,
   },
   {
     title: "Chaitanya Bhajana Mandali",
     tagLine: "Soulful Devotional Music",
     description: "Experience the divine through melodious bhajans.",
-    imageUrl: "https://picsum.photos/160/160?random=3",
+    imageUrl: Bhajan,
   },
   {
     title: "Chaitanya Drawing Class",
     tagLine: "Unleash Your Creativity",
     description: "Learn the fundamentals of drawing and sketching.",
-    imageUrl: "https://picsum.photos/160/160?random=4",
+    imageUrl: Drawing,
   },
   {
     title: "Chaitanya Yakshagana Class",
     tagLine: "Traditional Indian Theatre",
     description:
       "Explore the art of Yakshagana, a traditional Indian theatre form.",
-    imageUrl: "https://picsum.photos/160/160?random=5",
+    imageUrl: Yakshagana,
   },
 ];
 

@@ -7,7 +7,7 @@ export const TeachersSection = () => {
     {
       name: "Shri Chennakeshava Kulal",
       role: "Drawing Teacher",
-      image: "https://picsum.photos/160/160?random=1",
+      image: "https://picsum.photoss/160/160?random=1",
     },
     {
       name: "Shri Mahesh Kulal Kadeswalya",
@@ -18,7 +18,7 @@ export const TeachersSection = () => {
     {
       name: "Smt Sowmya S Kulal",
       role: "Bhajan Teacher",
-      image: "https://picsum.photos/160/160?random=3",
+      image: "https://picsum.photos/s160/160?random=3",
     },
   ];
 
@@ -42,6 +42,10 @@ export const TeachersSection = () => {
               <img
                 src={teacher.image}
                 alt={teacher.name}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src =
+                    "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><circle cx='80' cy='50' r='30' fill='%23ccc'/><path d='M40,130 C40,100 120,100 120,130 Z' fill='%23ccc'/></svg>";
+                }}
                 className="teacher-image"
               />
             </div>
