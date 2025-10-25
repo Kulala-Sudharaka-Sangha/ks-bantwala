@@ -79,12 +79,12 @@
       .member-details {
         text-align: left;
         display: flex;
-        // justify-content: center;
+        justify-content: center;
         flex-direction: column;
-        font-size: 1.2rem;
+        font-size: 1rem;
 
         .name {
-          font-size: 1.4rem;
+          font-size: 1rem;
           font-weight: bold;
         }
 
@@ -112,8 +112,8 @@
 }
 
 .icon {
-  width: 2rem;
-  font-size: 1.4rem;
+  width: 1rem;
+  font-size: 1rem;
   padding-right: 1rem;
 }
 
