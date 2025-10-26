@@ -68,6 +68,15 @@
         "phNumber": "9876543211"
       },
       {
+        "id": "member-22",
+        "name": "Ganesh Kulal Mardholi",
+        "role": "Member",
+        "image": "https://i.ibb.co/1YcM4VDK/Whats-App-Image-2025-10-21-at-10-59-25-AM.jpg",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
         "id": "member-13",
         "name": "Rajesh Kulal Rayi",
         "role": "Secretary",

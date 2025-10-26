@@ -19,7 +19,7 @@ import educationFundQR from "../../assets/payment-qr-code/vidhya-nidhi.png";
 const PaymentQRs = {
   [PaymentCause.BuildingFund]: buildingFundQR,
   [PaymentCause.EducationFund]: educationFundQR,
-  [PaymentCause.Membership]: buildingFundQR,
+  [PaymentCause.Membership]: educationFundQR,
 };
 
 const UPI_IDS = {
