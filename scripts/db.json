@@ -134,7 +134,7 @@
         "id": "member-18",
         "name": "Devadas Kulal Agrabailu",
         "role": "Member",
-        "image": "https://i.ibb.co/gZSQvGDn/Screenshot-2025-10-17-at-2-31-34-PM.png",
+        "image": "https://i.ibb.co/XfzFYcL6/Whats-App-Image-2025-10-26-at-10-49-01-AM.jpg",
         "bloodGroup": "B+",
         "address": "Bantwala",
         "phNumber": "9876543211"
@@ -277,7 +277,7 @@
         "id": "member-8",
         "name": "Ganesh Kulal Duganakodi",
         "role": "Member",
-        "image": "https://picsumm.photos/160/160?random=2",
+        "image": "https://i.ibb.co/qY4k1X0G/Whats-App-Image-2025-10-26-at-10-46-10-AM.jpg",
         "bloodGroup": "B+",
         "address": "Bantwala",
         "phNumber": "9876543211"
@@ -321,6 +321,15 @@
       {
         "id": "member-15",
         "name": "Purushothama Kulal",
+        "role": "Member",
+        "image": "https://picsumm.photos/160/160?random=2",
+        "bloodGroup": "B+",
+        "address": "Bantwala",
+        "phNumber": "9876543211"
+      },
+      {
+        "id": "member-16",
+        "name": "Shekhar Kulal Manihalla",
         "role": "Member",
         "image": "https://picsumm.photos/160/160?random=2",
         "bloodGroup": "B+",

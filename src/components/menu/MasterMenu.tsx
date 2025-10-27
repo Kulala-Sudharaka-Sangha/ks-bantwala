@@ -84,7 +84,12 @@ const MasterMenu = () => {
           <div
             key={category.id}
             className={`menu-category${
-              activeRouterPage === category.items[0].path ? " active" : ""
+              category.items[0].path === String(activeRouterPage) ||
+              new RegExp(`^${category.items[0].path}/\\w+`).test(
+                String(activeRouterPage)
+              )
+                ? " active"
+                : ""
             }`}
           >
             {!category.hasSubCategory && (

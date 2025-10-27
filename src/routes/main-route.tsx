@@ -62,6 +62,10 @@ const appRouter = createBrowserRouter([
         path: RoutesList.PAYMENT,
         element: <PaymentPage />,
       },
+      {
+        path: RoutesList.NEWS_DETAILS,
+        element: <NewsFeeds />,
+      },
     ],
   },
 ]);

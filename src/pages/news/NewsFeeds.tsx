@@ -7,8 +7,13 @@ import { fetchNews, News } from "../../store/slices/news-slice";
 import { AppDispatch, RootState } from "../../store/app-store";
 import { useDispatch, useSelector } from "react-redux";
 import Loading from "../../components/loading/Loading";
+import { useParams } from "react-router-dom";
+import useNavigation from "../../hooks/useNavigation";
 
 const NewsFeeds = () => {
+  const { id } = useParams();
+  const navigation = useNavigation();
+
   const dispatch = useDispatch<AppDispatch>();
   const { newsList } = useSelector((state: RootState) => state.news);
   const loading = useSelector((state: RootState) => state.news.loading);
@@ -36,7 +41,6 @@ const NewsFeeds = () => {
     }
 
     setFilteredNews(data);
-    setMainNews(data[0] || null);
     setCurrentPage(1);
   }, [searchTerm, selectedCategory, newsList]);
 
@@ -45,8 +49,9 @@ const NewsFeeds = () => {
   }, []);
 
   useEffect(() => {
-    console.log("Fetched news:", newsList);
-  }, [newsList]);
+    const newsItem = id ? newsList.find((news) => news.id === id) : newsList[0];
+    setMainNews(newsItem || null);
+  }, [newsList, id]);
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const paginatedNews = filteredNews.slice(
@@ -119,7 +124,7 @@ const NewsFeeds = () => {
               <div
                 key={news.id}
                 className="side-item"
-                onClick={() => setMainNews(news)}
+                onClick={() => navigation.handleNavigation(`/news/${news.id}`)}
               >
                 {(() => {
                   const match = news.content.match(
@@ -136,10 +141,8 @@ const NewsFeeds = () => {
                     className="side-content"
                     dangerouslySetInnerHTML={{
                       __html: (() => {
-                        // Remove everything before and including the first image tag
                         const imgRegex = /<img[^>]*>[\s\n]*/i;
                         const parts = news.content.split(imgRegex);
-                        // parts[1] will be the content after the first image
                         return parts[1] || "";
                       })(),
                     }}

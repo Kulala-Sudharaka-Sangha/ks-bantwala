@@ -7,6 +7,7 @@ enum RoutesList {
   CONTACT_US = "/contact-us",
   MEMBERS_LIST = "/members-list",
   PAST_COMMITTEE_MEMBERS = "/past-committee-members",
+  NEWS_DETAILS = "/news/:id",
   NEWS = "/news",
   NEWS_EDITOR = "/news-editor",
   PAYMENT = "/payment",
