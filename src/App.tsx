@@ -6,6 +6,8 @@ import Header from "./components/header/Header";
 import { useEffect } from "react";
 import { setActiveRouterPage } from "./store/slices/ui-controls";
 import { useDispatch } from "react-redux";
+import { doc, getDoc, increment, setDoc, updateDoc } from "firebase/firestore";
+import { db } from "./firebase";
 
 function App() {
   const dispatch = useDispatch();
@@ -13,7 +15,23 @@ function App() {
 
   useEffect(() => {
     dispatch(setActiveRouterPage(location.pathname));
+    logPageVisit();
   }, []);
+
+  const logPageVisit = async () => {
+    const docRef = doc(db, "pageVisits", "visitCount");
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      await updateDoc(docRef, {
+        count: increment(1),
+      });
+    } else {
+      await setDoc(docRef, {
+        count: 1,
+      });
+    }
+  };
 
   return (
     <div className="app">
